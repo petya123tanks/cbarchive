@@ -1,13 +1,108 @@
+-- ку всем кто юзает то спасибо я сделал новую версию ворк кнайф килл алл и килл алл думаю что вам нравится это то спасибо что вы с нами
+-- создатель ре-скин меню, доп. функции: 30 фпс я стараюсь <C
+-- второй создатель, фикс knife/kill all: любит дрейка 
+-- мне лень писать что я добавил лол. ну ладно скажу,
+-- крч в менюшке, на заднем фоне кабанчик плавает :)
+-- everyone is pasted and patched :flushed: :flushed: :flushed: :flushed: 
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+-- kabanware
+
 getgenv().values = {}
 getgenv().Version = "0.5"; -- Your version.
 getgenv().Build = "dev"; -- Your build.
 getgenv().Name = "Bloxware";
 getgenv().Theme = {
     Border = Color3.fromRGB(0, 0, 0),
-    Border2 = Color3.fromRGB(60, 60, 60),
-    Background = Color3.fromRGB(45, 45, 45),
+    Border2 = Color3.fromRGB(0, 255, 60),
+    Background = Color3.fromRGB(0, 102, 51),
     Accent = Color3.fromRGB(255, 255, 255),
-    Gradient = game:HttpGet("https://i.imgur.com/5hmlrjX.png"),
+    Gradient = game:HttpGet("https://imgur.com/a/kWtEmXR"),
+    -- Gradient = game:HttpGet("https://i.imgur.com/5hmlrjX.png"),
 
     TextColor = Color3.fromRGB(255, 255, 255),
     TextOutline = Color3.fromRGB(0, 0, 0),
@@ -107,11 +202,12 @@ function library:Tween(...) TweenService:Create(...):Play() end
     local menu = {}
 
     local salad = INST("ScreenGui")
-    local Menu = INST("ImageLabel")
     local TextLabel = INST("TextLabel")
     local TabButtons = INST("Frame")
     local UIListLayout = INST("UIListLayout")
     local Tabs = INST("Frame")
+    local Menu = INST("ImageLabel")
+
 
     salad.Name = "neversalad"
     salad.ResetOnSpawn = false
@@ -151,11 +247,13 @@ function library:Tween(...) TweenService:Create(...):Play() end
 
     Menu.Name = "Menu"
     Menu.Parent = salad
-    Menu.BackgroundColor3 = COL3RGB(0, 0, 0)
+    Menu.BackgroundColor3 = COL3RGB(25, 0, 51)
     Menu.Position = UDIM2(0.5, -300, 0.5, -300)
     Menu.Size = UDIM2(0, 600, 0, 680)
-    Menu.Image = "http://www.roblox.com/asset/?id=6357863121"
-    Menu.BorderSizePixel = 0
+    Menu.Image = "rbxassetid://14815556242" 
+    Menu.ImageTransparency = 0.7
+    Menu.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    Menu.BorderSizePixel = 1
 
     library.uiopen = true
 
@@ -172,14 +270,14 @@ function library:Tween(...) TweenService:Create(...):Play() end
       local Frame = INST("Frame")
       local UIListLayout = INST("UIListLayout")
       TextLabel.Parent = KeybindList
-      TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+      TextLabel.BackgroundColor3 = Color3.fromRGB(100, 0, 0) -- TextLabel.BackgroundColor3 = Color3.fromRGB(100, 0, 0)
       TextLabel.BackgroundTransparency = 1.000
       TextLabel.BorderColor3 = Color3.fromRGB(255, 255, 255)
       TextLabel.Position = UDim2.new(0, 5, 0.300000012, 0)
       TextLabel.Size = UDim2.new(0, 200, 0, 20)
       TextLabel.ZIndex = 2
-      TextLabel.Font = Enum.Font.Code
-      TextLabel.Text = "keybinds"
+      TextLabel.Font = Enum.Font.Gotham
+      TextLabel.Text = "Бинды"
       TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
       TextLabel.TextSize = 15.000
       TextLabel.TextStrokeTransparency = 0.000
@@ -210,7 +308,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
         TextLabel.BorderColor3 = Color3.fromRGB(255, 255, 255)
         TextLabel.Size = UDim2.new(0, 200, 0, 20)
         TextLabel.ZIndex = 2
-        TextLabel.Font = Enum.Font.Code
+        TextLabel.Font = Enum.Font.Gotham
         TextLabel.Text = "> "..text
         TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
         TextLabel.TextSize = 14.000
@@ -271,8 +369,8 @@ function library:Tween(...) TweenService:Create(...):Play() end
     TextLabel.AnchorPoint = Vector2.new(0.5, 0)
     TextLabel.Position = UDIM2(0.5, 0, 0, 0)
     TextLabel.Size = UDIM2(0, 0, 0, 29)
-    TextLabel.Size = UDIM2(0, txt:GetTextSize(name, 15, Enum.Font.Code, Vec2(700, TextLabel.AbsoluteSize.Y)).X, 0, 29)
-    TextLabel.Font = Enum.Font.Code
+    TextLabel.Size = UDIM2(0, txt:GetTextSize(name, 15, Enum.Font.Gotham, Vec2(700, TextLabel.AbsoluteSize.Y)).X, 0, 29)
+    TextLabel.Font = Enum.Font.Gotham
     TextLabel.Text = name
     TextLabel.TextColor3 = COL3RGB(255, 255, 255)
     TextLabel.TextSize = 15.000
@@ -280,7 +378,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
 
     TabButtons.Name = "TabButtons"
     TabButtons.Parent = Menu
-    TabButtons.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    TabButtons.BackgroundColor3 = Color3.fromRGB(255, 0, 0) 
     TabButtons.BackgroundTransparency = 1
     TabButtons.Position = UDim2.new(0, 10, 0, 15)
     TabButtons.Size = UDim2.new(TextLabel.Size.X.Scale, 590-TextLabel.Size.X.Offset, 0, 49)
@@ -309,8 +407,8 @@ function library:Tween(...) TweenService:Create(...):Play() end
       local TextButton = INST("TextButton")
       TextButton.BackgroundColor3 = COL3RGB(255, 255, 255)
       TextButton.BackgroundTransparency = 1
-      TextButton.Size = UDIM2(0, txt:GetTextSize(text, 15, Enum.Font.Code, Vec2(700,700)).X+12, 1, 0)
-      TextButton.Font = Enum.Font.Code
+      TextButton.Size = UDIM2(0, txt:GetTextSize(text, 15, Enum.Font.Gotham, Vec2(700,700)).X+12, 1, 0)
+      TextButton.Font = Enum.Font.Gotham
       TextButton.Text = text
       TextButton.TextColor3 = COL3RGB(255, 255, 255)
       TextButton.TextSize = 15.000
@@ -365,13 +463,13 @@ function library:Tween(...) TweenService:Create(...):Play() end
       if currenttab ~= text then
         for i,v in pairs(TabButtons:GetChildren()) do
           if v:IsA("TextButton") then
-            library:Tween(v, TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(200, 200, 200)})
+            library:Tween(v, TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(255, 255, 255)})
           end
         end
         for i,v in pairs(Tabs:GetChildren()) do
           v.Visible = false
         end
-        library:Tween(TextButton, TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(255, 255, 255)})
+        library:Tween(TextButton, TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(178, 102, 255)})
         currenttab = text
         TabGui.Visible = true
       end
@@ -392,8 +490,8 @@ function library:Tween(...) TweenService:Create(...):Play() end
 
         Section.Name = "Section"
         Section.Parent = TabGui[side]
-        Section.BackgroundColor3 = COL3RGB(1, 1, 1)
-        Section.BorderColor3 = COL3RGB(30, 30, 30)
+        Section.BackgroundColor3 = COL3RGB(51, 0, 102)
+        Section.BorderColor3 = COL3RGB(1, 1, 1)
         Section.BorderSizePixel = 1
         Section.Size = UDIM2(1, 0, 0, 33)
 
@@ -404,7 +502,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
         SectionText.Position = UDIM2(0, 0, 0, -12)
         SectionText.Size = UDIM2(0, 280, 0, 19)
         SectionText.ZIndex = 2
-        SectionText.Font = Enum.Font.Code
+        SectionText.Font = Enum.Font.Gotham
         SectionText.Text = text
         SectionText.TextStrokeTransparency = 0
         SectionText.TextColor3 = COL3RGB(255, 255, 255)
@@ -419,9 +517,9 @@ function library:Tween(...) TweenService:Create(...):Play() end
         Inner.Position = UDIM2(0, 1, 0, 1)
         Inner.Size = UDIM2(1, -2, 1, -3)
 
-        UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(40, 40, 40)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(25, 25, 25))}
+        UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(41, 0, 65)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(25, 0, 51))}
         UIGradient.Rotation = 90
-        UIGradient.Parent = Inner
+        UIGradient.Parent = Inner -- purple (41, 0, 65)
 
         sectiontabs.Name = "sectiontabs"
         sectiontabs.Parent = Section
@@ -454,7 +552,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
           tab1.Parent = Inner
           tab1.BackgroundColor3 = COL3RGB(1, 1, 1)
           tab1.BackgroundTransparency = 1.000
-          tab1.BorderColor3 = COL3RGB(30, 30, 30)
+          tab1.BorderColor3 = COL3RGB(51, 0, 102)
           tab1.BorderSizePixel = 1
           tab1.Position = UDIM2(0, 0, 0, 30)
           tab1.Size = UDIM2(1, 0, 1, -21)
@@ -472,8 +570,8 @@ function library:Tween(...) TweenService:Create(...):Play() end
           TextButton.Parent = sectiontabs
           TextButton.BackgroundColor3 = COL3RGB(255, 255, 255)
           TextButton.BackgroundTransparency = 1.000
-          TextButton.Size = UDIM2(0, txt:GetTextSize(text, 14, Enum.Font.Code, Vec2(700,700)).X + 2, 1, 0)
-          TextButton.Font = Enum.Font.Code
+          TextButton.Size = UDIM2(0, txt:GetTextSize(text, 14, Enum.Font.Gotham, Vec2(700,700)).X + 2, 1, 0)
+          TextButton.Font = Enum.Font.Gotham
           TextButton.Text = text
           TextButton.TextColor3 = COL3RGB(200, 200, 200)
           TextButton.TextSize = 14.000
@@ -492,7 +590,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
           end
           Section.Size = tabsize
           tab1.Visible = true
-          library:Tween(TextButton, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(255, 255, 255)})
+          library:Tween(TextButton, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(178, 102, 255)})
           end)
 
           function tab:Element(type, text, data, callback)
@@ -525,13 +623,13 @@ function library:Tween(...) TweenService:Create(...):Play() end
 
               Button.Name = "Button"
               Button.Parent = Dropdown
-              Button.BackgroundColor3 = COL3RGB(25, 25, 25)
-              Button.BorderColor3 = COL3RGB(0, 0, 0)
+              Button.BackgroundColor3 = COL3RGB(25, 0, 51)
+              Button.BorderColor3 = COL3RGB(1, 1, 1)
               Button.BorderSizePixel = 1
               Button.Position = UDIM2(0, 30, 0, 16)
               Button.Size = UDIM2(0, 175, 0, 17)
               Button.AutoButtonColor = false
-              Button.Font = Enum.Font.SourceSans
+              Button.Font = Enum.Font.Gotham
               Button.Text = ""
               Button.TextColor3 = COL3RGB(0, 0, 0)
               Button.TextSize = 14.000
@@ -542,7 +640,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
               TextLabel.BorderColor3 = COL3RGB(0, 0, 0)
               TextLabel.Position = UDIM2(0, 5, 0, 0)
               TextLabel.Size = UDIM2(-0.21714285, 208, 1, 0)
-              TextLabel.Font = Enum.Font.Code
+              TextLabel.Font = Enum.Font.Gotham
               TextLabel.Text = "..."
               TextLabel.TextColor3 = COL3RGB(200, 200, 200)
               TextLabel.TextSize = 14.000
@@ -553,17 +651,14 @@ function library:Tween(...) TweenService:Create(...):Play() end
               Drop.Name = "Drop"
               Drop.Parent = Button
               Drop.Active = true
-              Drop.BackgroundColor3 = COL3RGB(25, 25, 25)
-              Drop.BorderColor3 = COL3RGB(0, 0, 0)
+              Drop.BackgroundColor3 = COL3RGB(25, 0, 51)
+              Drop.BorderColor3 = COL3RGB(1, 1, 1)
               Drop.BorderSizePixel = 1
               Drop.Position = UDIM2(0, 0, 1, 1)
               Drop.Size = UDIM2(1, 0, 0, 20)
               Drop.Visible = false
-              Drop.BottomImage = "http://www.roblox.com/asset/?id=175158447"
               Drop.CanvasSize = UDIM2(1, 1, 1, 1)
               Drop.ScrollBarThickness = 0
-              Drop.TopImage = "http://www.roblox.com/asset/?id=175158447"
-              Drop.MidImage = "http://www.roblox.com/asset/?id=175158447"
               Drop.AutomaticCanvasSize = "Y"
               Drop.ZIndex = 5
               Drop.ScrollBarImageColor3 = COL3RGB(255, 255, 255)
@@ -628,7 +723,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
                   Button.Position = UDIM2(0, 30, 0, 16)
                   Button.Size = UDIM2(0, 175, 0, 17)
                   Button.AutoButtonColor = false
-                  Button.Font = Enum.Font.SourceSans
+                  Button.Font = Enum.Font.Gotham
                   Button.Text = ""
                   Button.TextColor3 = COL3RGB(0, 0, 0)
                   Button.TextSize = 14.000
@@ -641,7 +736,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
                   TextLabel.BorderColor3 = COL3RGB(25, 25, 25)
                   TextLabel.Position = UDIM2(0, 5, 0, -1)
                   TextLabel.Size = UDIM2(-0.21714285, 208, 1, 0)
-                  TextLabel.Font = Enum.Font.Code
+                  TextLabel.Font = Enum.Font.Gotham
                   TextLabel.Text = v
                   TextLabel.TextColor3 = COL3RGB(200, 200, 200)
                   TextLabel.TextSize = 14.000
@@ -655,10 +750,10 @@ function library:Tween(...) TweenService:Create(...):Play() end
                         TBLREMOVE(Element.value.Jumbobox, i)
                       end
                     end
-                    library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(255, 255, 255)})
+                    library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(255, 255, 255)}) --255 255 255
                   else
                     INSERT(Element.value.Jumbobox, v)
-                    library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(255, 255, 255)})
+                    library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(178, 102, 255)})
                   end
                   updatetext()
 
@@ -667,7 +762,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
                   end)
                   Button.MouseEnter:Connect(function()
                   if not TBLFIND(Element.value.Jumbobox, v) then
-                    library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(255, 255, 255)})
+                    library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(178, 102, 255)})
                   end
                   end)
                   Button.MouseLeave:Connect(function()
@@ -684,7 +779,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
                 for i,v in pairs(Drop:GetChildren()) do
                   if v.Name ~= "UIListLayout" then
                     if TBLFIND(val.Jumbobox, v.Name) then
-                      v.TextLabel.TextColor3 = COL3RGB(255, 255, 255)
+                      v.TextLabel.TextColor3 = COL3RGB(178, 102, 255)
                     else
                       v.TextLabel.TextColor3 = COL3RGB(200, 200, 200)
                     end
@@ -703,14 +798,13 @@ function library:Tween(...) TweenService:Create(...):Play() end
               ImageLabel.BackgroundTransparency = 1.000
               ImageLabel.Position = UDIM2(0, 165, 0, 6)
               ImageLabel.Size = UDIM2(0, 6, 0, 4)
-              ImageLabel.Image = "http://www.roblox.com/asset/?id=6724771531"
 
               TextLabel_3.Parent = Dropdown
               TextLabel_3.BackgroundColor3 = COL3RGB(200, 200, 200)
               TextLabel_3.BackgroundTransparency = 1.000
               TextLabel_3.Position = UDIM2(0, 32, 0, -1)
               TextLabel_3.Size = UDIM2(0.111913361, 208, 0.382215232, 0)
-              TextLabel_3.Font = Enum.Font.Code
+              TextLabel_3.Font = Enum.Font.Gotham
               TextLabel_3.Text = text
               TextLabel_3.TextColor3 = COL3RGB(200, 200, 200)
               TextLabel_3.TextSize = 14.000
@@ -766,15 +860,15 @@ function library:Tween(...) TweenService:Create(...):Play() end
               Button.BackgroundColor3 = COL3RGB(255, 255, 255)
               Button.BackgroundTransparency = 1.000
               Button.Size = UDIM2(1, 0, 1, 0)
-              Button.Font = Enum.Font.SourceSans
+              Button.Font = Enum.Font.Gotham
               Button.Text = ""
               Button.TextColor3 = COL3RGB(0, 0, 0)
               Button.TextSize = 14.000
 
               Color.Name = "Color"
               Color.Parent = Button
-              Color.BackgroundColor3 = COL3RGB(255, 255, 255)
-              Color.BorderColor3 = COL3RGB(30, 30, 30)
+              Color.BackgroundColor3 = COL3RGB(21, 0, 51)
+              Color.BorderColor3 = COL3RGB(51, 0, 102)
               Color.Position = UDIM2(0, 15, 0.5, -5)
               Color.Size = UDIM2(0, 8, 0, 8)
               local binding = false
@@ -783,7 +877,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
               TextLabel.BackgroundTransparency = 1.000
               TextLabel.Position = UDIM2(0, 32, 0, -1)
               TextLabel.Size = UDIM2(0.111913361, 208, 1, 0)
-              TextLabel.Font = Enum.Font.Code
+              TextLabel.Font = Enum.Font.Gotham
               TextLabel.Text = text
               TextLabel.TextColor3 = COL3RGB(200, 200, 200)
               TextLabel.TextSize = 14.000
@@ -791,8 +885,8 @@ function library:Tween(...) TweenService:Create(...):Play() end
 
               local function update()
                 if Element.value.Toggle then
-                  tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = COL3RGB(255, 255, 255)})
-                  library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(255, 255, 255)})
+                  tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = COL3RGB(178, 102, 255)})
+                  library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(178, 102, 255)})
                 else
                   keybindremove(text)
                   tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = COL3RGB(1, 1, 1)})
@@ -829,9 +923,9 @@ function library:Tween(...) TweenService:Create(...):Play() end
                 Keybind.Position = UDIM2(0, 270, 0.5, -6)
                 Keybind.Text = "NONE"
                 Keybind.Size = UDIM2(0, 43, 0, 12)
-                Keybind.Size = UDIM2(0,txt:GetTextSize("NONE", 14, Enum.Font.Code, Vec2(700, 12)).X + 5,0, 12)
+                Keybind.Size = UDIM2(0,txt:GetTextSize("NONE", 14, Enum.Font.Gotham, Vec2(700, 12)).X + 5,0, 12)
                 Keybind.AutoButtonColor = false
-                Keybind.Font = Enum.Font.Code
+                Keybind.Font = Enum.Font.Gotham
                 Keybind.TextColor3 = COL3RGB(200, 200, 200)
                 Keybind.TextSize = 14.000
                 Keybind.AnchorPoint = Vec2(1,0)
@@ -853,7 +947,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
                 Always.Position = UDIM2(-3.03289485, 231, 0.115384616, -6)
                 Always.Size = UDIM2(1, 0, 0, 16)
                 Always.AutoButtonColor = false
-                Always.Font = Enum.Font.SourceSansBold
+                Always.Font = Enum.Font.GothamBold
                 Always.Text = "Always"
                 Always.TextColor3 = COL3RGB(255, 255, 255)
                 Always.TextSize = 14.000
@@ -871,7 +965,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
                 Hold.Position = UDIM2(-3.03289485, 231, 0.115384616, -6)
                 Hold.Size = UDIM2(1, 0, 0, 16)
                 Hold.AutoButtonColor = false
-                Hold.Font = Enum.Font.Code
+                Hold.Font = Enum.Font.Gotham
                 Hold.Text = "Hold"
                 Hold.TextColor3 = COL3RGB(200, 200, 200)
                 Hold.TextSize = 14.000
@@ -885,7 +979,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
                 Toggle.Position = UDIM2(-3.03289485, 231, 0.115384616, -6)
                 Toggle.Size = UDIM2(1, 0, 0, 16)
                 Toggle.AutoButtonColor = false
-                Toggle.Font = Enum.Font.Code
+                Toggle.Font = Enum.Font.Gotham
                 Toggle.Text = "Toggle"
                 Toggle.TextColor3 = COL3RGB(200, 200, 200)
                 Toggle.TextSize = 14.000
@@ -902,18 +996,18 @@ function library:Tween(...) TweenService:Create(...):Play() end
                     end
                     for _,button in pairs(Frame:GetChildren()) do
                       if button:IsA("TextButton") and button.Text ~= Element.value.Type then
-                        button.Font = Enum.Font.Code
+                        button.Font = Enum.Font.Gotham
                         library:Tween(button, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(200,200,200)})
                       end
                     end
-                    button.Font = Enum.Font.SourceSansBold
+                    button.Font = Enum.Font.GothamBold
                     button.TextColor3 = COL3RGB(255, 255, 255)
                     values[tabname][sectorname][tabtext][text] = Element.value
                     callback(Element.value)
                     end)
                     button.MouseEnter:Connect(function()
                     if Element.value.Type ~= button.Text then
-                      library:Tween(button, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(255, 255, 255)})
+                      library:Tween(button, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(178, 102, 255)})
                     end
                     end)
                     button.MouseLeave:Connect(function()
@@ -928,7 +1022,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
                   wait()
                   binding = true
                   Keybind.Text = "..."
-                  Keybind.Size = UDIM2(0,txt:GetTextSize("...", 14, Enum.Font.Code, Vec2(700, 12)).X + 4,0, 12)
+                  Keybind.Size = UDIM2(0,txt:GetTextSize("...", 14, Enum.Font.Gotham, Vec2(700, 12)).X + 4,0, 12)
                 end
                 end)
                 Keybind.MouseButton2Down:Connect(function()
@@ -961,11 +1055,11 @@ function library:Tween(...) TweenService:Create(...):Play() end
                 if binding then
                   binding = false
                   Keybind.Text = input.KeyCode.Name ~= "Unknown" and input.KeyCode.Name:upper() or input.UserInputType.Name:upper()
-                  Keybind.Size = UDIM2(0,txt:GetTextSize(Keybind.Text, 14, Enum.Font.Code, Vec2(700, 12)).X + 5,0, 12)
+                  Keybind.Size = UDIM2(0,txt:GetTextSize(Keybind.Text, 14, Enum.Font.Gotham, Vec2(700, 12)).X + 5,0, 12)
                   Element.value.Key = input.KeyCode.Name ~= "Unknown" and input.KeyCode.Name or input.UserInputType.Name
                   if input.KeyCode.Name == "Backspace" then
                     Keybind.Text = "NONE"
-                    Keybind.Size = UDIM2(0,txt:GetTextSize(Keybind.Text, 14, Enum.Font.Code, Vec2(700, 12)).X + 4,0, 12)
+                    Keybind.Size = UDIM2(0,txt:GetTextSize(Keybind.Text, 14, Enum.Font.Gotham, Vec2(700, 12)).X + 4,0, 12)
                     Element.value.Key = nil
                   end
                 else
@@ -1068,7 +1162,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
               Button.BackgroundColor3 = COL3RGB(255, 255, 255)
               Button.BackgroundTransparency = 1.000
               Button.Size = UDIM2(1, 0, 1, 0)
-              Button.Font = Enum.Font.SourceSans
+              Button.Font = Enum.Font.Gotham
               Button.Text = ""
               Button.TextColor3 = COL3RGB(0, 0, 0)
               Button.TextSize = 14.000
@@ -1085,7 +1179,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
               TextLabel.BackgroundTransparency = 1.000
               TextLabel.Position = UDIM2(0, 32, 0, -1)
               TextLabel.Size = UDIM2(0.111913361, 208, 1, 0)
-              TextLabel.Font = Enum.Font.Code
+              TextLabel.Font = Enum.Font.Gotham
               TextLabel.Text = text
               TextLabel.TextColor3 = COL3RGB(200, 200, 200)
               TextLabel.TextSize = 14.000
@@ -1093,12 +1187,12 @@ function library:Tween(...) TweenService:Create(...):Play() end
 
               local function update()
                 if Element.value.Toggle then
-                  tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = COL3RGB(255, 255, 255)})
-                  library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(255, 255, 255)})
+                  tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = COL3RGB(178, 102, 255)})
+                  library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(178, 102, 255)})
                 else
                   keybindremove(text)
                   tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = COL3RGB(1, 1, 1)})
-                  library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(200, 200, 200)})
+                  library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(255, 255, 255)})
                 end
                 values[tabname][sectorname][tabtext][text] = Element.value
               end
@@ -1139,7 +1233,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
               Button.BackgroundColor3 = COL3RGB(255, 255, 255)
               Button.BackgroundTransparency = 1.000
               Button.Size = UDIM2(1, 0, 1, 0)
-              Button.Font = Enum.Font.SourceSans
+              Button.Font = Enum.Font.Gotham
               Button.Text = ""
               Button.TextColor3 = COL3RGB(0, 0, 0)
               Button.TextSize = 14.000
@@ -1156,7 +1250,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
               TextLabel.BackgroundTransparency = 1.000
               TextLabel.Position = UDIM2(0, 32, 0, -1)
               TextLabel.Size = UDIM2(0.111913361, 208, 1, 0)
-              TextLabel.Font = Enum.Font.Code
+              TextLabel.Font = Enum.Font.Gotham
               TextLabel.Text = text
               TextLabel.TextColor3 = COL3RGB(200, 200, 200)
               TextLabel.TextSize = 14.000
@@ -1191,7 +1285,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
               ColorP.Position = UDIM2(0, 270, 0.5, -4)
               ColorP.Size = UDIM2(0, 18, 0, 8)
               ColorP.AutoButtonColor = false
-              ColorP.Font = Enum.Font.Code
+              ColorP.Font = Enum.Font.Gotham
               ColorP.Text = ""
               ColorP.TextColor3 = COL3RGB(200, 200, 200)
               ColorP.TextSize = 14.000
@@ -1397,7 +1491,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
               Button.BackgroundColor3 = COL3RGB(255, 255, 255)
               Button.BackgroundTransparency = 1.000
               Button.Size = UDIM2(1, 0, 1, 0)
-              Button.Font = Enum.Font.SourceSans
+              Button.Font = Enum.Font.Gotham
               Button.Text = ""
               Button.TextColor3 = COL3RGB(0, 0, 0)
               Button.TextSize = 14.000
@@ -1414,7 +1508,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
               TextLabel.BackgroundTransparency = 1.000
               TextLabel.Position = UDIM2(0, 32, 0, -1)
               TextLabel.Size = UDIM2(0.111913361, 208, 1, 0)
-              TextLabel.Font = Enum.Font.Code
+              TextLabel.Font = Enum.Font.Gotham
               TextLabel.Text = text
               TextLabel.TextColor3 = COL3RGB(200, 200, 200)
               TextLabel.TextSize = 14.000
@@ -1449,7 +1543,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
               ColorP.Position = UDIM2(0, 270, 0.5, -4)
               ColorP.Size = UDIM2(0, 18, 0, 8)
               ColorP.AutoButtonColor = false
-              ColorP.Font = Enum.Font.Code
+              ColorP.Font = Enum.Font.Gotham
               ColorP.Text = ""
               ColorP.TextColor3 = COL3RGB(200, 200, 200)
               ColorP.TextSize = 14.000
@@ -1717,13 +1811,13 @@ function library:Tween(...) TweenService:Create(...):Play() end
 
               Button.Name = "Button"
               Button.Parent = Dropdown
-              Button.BackgroundColor3 = COL3RGB(25, 25, 25)
+              Button.BackgroundColor3 = COL3RGB(25, 0, 51)
               Button.BorderColor3 = COL3RGB(0, 0, 0)
               Button.BorderSizePixel = 1
               Button.Position = UDIM2(0, 30, 0, 16)
               Button.Size = UDIM2(0, 175, 0, 17)
               Button.AutoButtonColor = false
-              Button.Font = Enum.Font.SourceSans
+              Button.Font = Enum.Font.Gotham
               Button.Text = ""
               Button.TextColor3 = COL3RGB(0, 0, 0)
               Button.TextSize = 14.000
@@ -1734,7 +1828,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
               TextLabel.BorderColor3 = COL3RGB(30, 30, 30)
               TextLabel.Position = UDIM2(0, 5, 0, 0)
               TextLabel.Size = UDIM2(-0.21714285, 208, 1, 0)
-              TextLabel.Font = Enum.Font.Code
+              TextLabel.Font = Enum.Font.Gotham
               TextLabel.Text = Element.value.Dropdown
               TextLabel.TextColor3 = COL3RGB(200, 200, 200)
               TextLabel.TextSize = 14.000
@@ -1745,17 +1839,14 @@ function library:Tween(...) TweenService:Create(...):Play() end
               Drop.Name = "Drop"
               Drop.Parent = Button
               Drop.Active = true
-              Drop.BackgroundColor3 = COL3RGB(25, 25, 25)
+              Drop.BackgroundColor3 = COL3RGB(25, 0, 51)
               Drop.BorderColor3 = COL3RGB(0, 0, 0)
               Drop.BorderSizePixel = 1
               Drop.Position = UDIM2(0, 0, 1, 1)
               Drop.Size = UDIM2(1, 0, 0, 20)
               Drop.Visible = false
-              Drop.BottomImage = "http://www.roblox.com/asset/?id=175158447"
               Drop.CanvasSize = UDIM2(1, 1, 1, 1)
               Drop.ScrollBarThickness = 0
-              Drop.MidImage = "http://www.roblox.com/asset/?id=175158447"
-              Drop.TopImage = "http://www.roblox.com/asset/?id=175158447"
               Drop.AutomaticCanvasSize = "Y"
               Drop.ZIndex = 5
               Drop.ScrollBarImageColor3 = COL3RGB(255, 255, 255)
@@ -1784,7 +1875,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
                   Button.Position = UDIM2(0, 30, 0, 16)
                   Button.Size = UDIM2(0, 175, 0, 17)
                   Button.AutoButtonColor = false
-                  Button.Font = Enum.Font.SourceSans
+                  Button.Font = Enum.Font.Gotham
                   Button.Text = ""
                   Button.TextColor3 = COL3RGB(0, 0, 0)
                   Button.TextSize = 14.000
@@ -1797,7 +1888,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
                   TextLabel.BorderColor3 = COL3RGB(30, 30, 30)
                   TextLabel.Position = UDIM2(0, 5, 0, -1)
                   TextLabel.Size = UDIM2(-0.21714285, 208, 1, 0)
-                  TextLabel.Font = Enum.Font.Code
+                  TextLabel.Font = Enum.Font.Gotham
                   TextLabel.Text = v
                   TextLabel.TextColor3 = COL3RGB(200, 200, 200)
                   TextLabel.TextSize = 14.000
@@ -1813,7 +1904,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
                   Drop.CanvasPosition = Vec2(0,0)
                   end)
                   Button.MouseEnter:Connect(function()
-                  library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 =  COL3RGB(255, 255, 255)})
+                  library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 =  COL3RGB(178, 102, 255)})
                   end)
                   Button.MouseLeave:Connect(function()
                   library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 =  COL3RGB(200, 200, 200)})
@@ -1835,14 +1926,13 @@ function library:Tween(...) TweenService:Create(...):Play() end
               ImageLabel.BackgroundTransparency = 1.000
               ImageLabel.Position = UDIM2(0, 165, 0, 6)
               ImageLabel.Size = UDIM2(0, 6, 0, 4)
-              ImageLabel.Image = "http://www.roblox.com/asset/?id=6724771531"
 
               TextLabel_3.Parent = Dropdown
               TextLabel_3.BackgroundColor3 = COL3RGB(255, 255, 255)
               TextLabel_3.BackgroundTransparency = 1.000
               TextLabel_3.Position = UDIM2(0, 32, 0, -1)
               TextLabel_3.Size = UDIM2(0.111913361, 208, 0.382215232, 0)
-              TextLabel_3.Font = Enum.Font.Code
+              TextLabel_3.Font = Enum.Font.Gotham
               TextLabel_3.Text = text
               TextLabel_3.TextColor3 = COL3RGB(200, 200, 200)
               TextLabel_3.TextSize = 14.000
@@ -1900,7 +1990,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
               TextLabel.BackgroundTransparency = 1.000
               TextLabel.Position = UDIM2(0, 32, 0, -2)
               TextLabel.Size = UDIM2(0, 100, 0, 15)
-              TextLabel.Font = Enum.Font.Code
+              TextLabel.Font = Enum.Font.Gotham
               TextLabel.Text = text
               TextLabel.TextColor3 = COL3RGB(200, 200, 200)
               TextLabel.TextSize = 14.000
@@ -1913,7 +2003,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
               Button.Position = UDIM2(0, 30, 0, 15)
               Button.Size = UDIM2(0, 175, 0, 11)
               Button.AutoButtonColor = false
-              Button.Font = Enum.Font.SourceSans
+              Button.Font = Enum.Font.Gotham
               Button.Text = ""
               Button.TextColor3 = COL3RGB(0, 0, 0)
               Button.TextSize = 14.000
@@ -1923,7 +2013,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
               Frame.BorderSizePixel = 1
              Frame.Size = UDIM2(0.5, 0, 1, 0)
 
-              UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, COL3RGB(255, 255, 255)), ColorSequenceKeypoint.new(1, COL3RGB(0, 0, 0))}
+              UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, COL3RGB(178, 102, 255)), ColorSequenceKeypoint.new(1, COL3RGB(178, 102, 255))}
               UIGradient.Rotation = 90
               UIGradient.Parent = Frame
 
@@ -1933,7 +2023,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
               Value.BackgroundTransparency = 1.000
               Value.Position = UDIM2(0, 150, 0, -1)
               Value.Size = UDIM2(0, 55, 0, 15)
-              Value.Font = Enum.Font.Code
+              Value.Font = Enum.Font.Gotham
               Value.Text = "50"
               Value.TextColor3 = COL3RGB(200, 200, 200)
               Value.TextSize = 14.000
@@ -2008,12 +2098,12 @@ function library:Tween(...) TweenService:Create(...):Play() end
 
               Button_2.Name = "Button"
               Button_2.Parent = Button
-              Button_2.BackgroundColor3 = COL3RGB(25, 25, 25)
+              Button_2.BackgroundColor3 = COL3RGB(25, 0, 51)
               Button_2.BorderColor3 = COL3RGB(30, 30, 30)
               Button_2.Position = UDIM2(0, 30, 0.5, -9)
               Button_2.Size = UDIM2(0, 175, 0, 18)
               Button_2.AutoButtonColor = false
-              Button_2.Font = Enum.Font.SourceSans
+              Button_2.Font = Enum.Font.Gotham
               Button_2.Text = ""
               Button_2.TextColor3 = COL3RGB(0, 0, 0)
               Button_2.TextSize = 14.000
@@ -2023,7 +2113,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
               TextLabel.BackgroundTransparency = 1.000
               TextLabel.BorderColor3 = COL3RGB(30, 30, 30)
               TextLabel.Size = UDIM2(1, 0, 1, 0)
-              TextLabel.Font = Enum.Font.Code
+              TextLabel.Font = Enum.Font.Gotham
               TextLabel.Text = text
               TextLabel.TextColor3 = COL3RGB(200, 200, 200)
               TextLabel.TextSize = 14.000
@@ -2037,7 +2127,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
               callback()
               end)
               Button_2.MouseEnter:Connect(function()
-              library:Tween(TextLabel, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(255, 255, 255)})
+              library:Tween(TextLabel, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(178, 102, 255)})
               end)
               Button_2.MouseLeave:Connect(function()
               library:Tween(TextLabel, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(200, 200, 200)})
@@ -2083,7 +2173,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
         Section.Name = "Section"
         Section.Parent = TabGui[side]
         Section.BackgroundColor3 = COL3RGB(1, 1, 1)
-        Section.BorderColor3 = COL3RGB(30, 30, 30)
+        Section.BorderColor3 = COL3RGB(1, 1, 1)
         Section.BorderSizePixel = 1
         Section.Position = UDIM2(0.00358422939, 0, 0, 0)
         Section.Size = UDIM2(1, 0, 0, 22)
@@ -2095,7 +2185,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
         SectionText.Position = UDIM2(0, 0, 0, -12)
         SectionText.Size = UDIM2(0, 280, 0, 19)
         SectionText.ZIndex = 2
-        SectionText.Font = Enum.Font.Code
+        SectionText.Font = Enum.Font.Gotham
         SectionText.Text = text
         SectionText.TextColor3 = COL3RGB(255, 255, 255)
         SectionText.TextStrokeTransparency = 0
@@ -2110,9 +2200,9 @@ function library:Tween(...) TweenService:Create(...):Play() end
         Inner.Position = UDIM2(0, 1, 0, 1)
         Inner.Size = UDIM2(1, -2, 1, -2)
 
-        UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(40, 40, 40)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(25, 25, 25))}
+        UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(41, 0, 65)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(25, 0, 51))}
         UIGradient.Rotation = 90
-        UIGradient.Parent = Inner
+        UIGradient.Parent = Inner -- purple (41, 0, 65)
 
         local UIPadding = INST("UIPadding")
 
@@ -2172,13 +2262,13 @@ function library:Tween(...) TweenService:Create(...):Play() end
 
             Button.Name = "Button"
             Button.Parent = Dropdown
-            Button.BackgroundColor3 = COL3RGB(25, 25, 25)
+            Button.BackgroundColor3 = COL3RGB(25, 0, 51)
             Button.BorderColor3 = COL3RGB(0, 0, 0)
             Button.BorderSizePixel = 1
             Button.Position = UDIM2(0, 30, 0, 16)
             Button.Size = UDIM2(0, 175, 0, 17)
             Button.AutoButtonColor = false
-            Button.Font = Enum.Font.SourceSans
+            Button.Font = Enum.Font.Gotham
             Button.Text = ""
             Button.TextColor3 = COL3RGB(0, 0, 0)
             Button.TextSize = 14.000
@@ -2191,7 +2281,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
             TextLabel.BorderColor3 = COL3RGB(30, 30, 30)
             TextLabel.Position = UDIM2(0, 5, 0, 0)
             TextLabel.Size = UDIM2(-0.21714285, 208, 1, 0)
-            TextLabel.Font = Enum.Font.Code
+            TextLabel.Font = Enum.Font.Gotham
             TextLabel.Text = "lol"
             TextLabel.TextColor3 = COL3RGB(200, 200, 200)
             TextLabel.TextSize = 14.000
@@ -2202,17 +2292,14 @@ function library:Tween(...) TweenService:Create(...):Play() end
             Drop.Name = "Drop"
             Drop.Parent = Button
             Drop.Active = true
-            Drop.BackgroundColor3 = COL3RGB(25, 25, 25)
+            Drop.BackgroundColor3 = COL3RGB(25, 0, 51)
             Drop.BorderColor3 = COL3RGB(0, 0, 0)
             Drop.BorderSizePixel = 1
             Drop.Position = UDIM2(0, 0, 1, 1)
             Drop.Size = UDIM2(1, 0, 0, 20)
             Drop.Visible = false
-            Drop.BottomImage = "http://www.roblox.com/asset/?id=175158447"
             Drop.CanvasSize = UDIM2(1, 1, 1, 1)
             Drop.ScrollBarThickness = 0
-            Drop.TopImage = "http://www.roblox.com/asset/?id=175158447"
-            Drop.MidImage = "http://www.roblox.com/asset/?id=175158447"
             Drop.AutomaticCanvasSize = "Y"
             Drop.ZIndex = 5
             Drop.ScrollBarImageColor3 = COL3RGB(255, 255, 255)
@@ -2246,7 +2333,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
                 Button.Position = UDIM2(0, 30, 0, 16)
                 Button.Size = UDIM2(0, 175, 0, 17)
                 Button.AutoButtonColor = false
-                Button.Font = Enum.Font.SourceSans
+                Button.Font = Enum.Font.Gotham
                 Button.Text = ""
                 Button.TextColor3 = COL3RGB(0, 0, 0)
                 Button.TextSize = 14.000
@@ -2259,7 +2346,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
                 TextLabel.BorderColor3 = COL3RGB(30, 30, 30)
                 TextLabel.Position = UDIM2(0, 5, 0, -1)
                 TextLabel.Size = UDIM2(-0.21714285, 208, 1, 0)
-                TextLabel.Font = Enum.Font.Code
+                TextLabel.Font = Enum.Font.Gotham
                 TextLabel.Text = v
                 TextLabel.TextColor3 = COL3RGB(200, 200, 200)
                 TextLabel.TextSize = 14.000
@@ -2280,7 +2367,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
                 callback(Element.value)
                 end)
                 Button.MouseEnter:Connect(function()
-                library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 =  COL3RGB(255, 255, 255)})
+                library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 =  COL3RGB(178, 102, 255)})
                 end)
                 Button.MouseLeave:Connect(function()
                 library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 =  COL3RGB(200, 200, 200)})
@@ -2310,11 +2397,8 @@ function library:Tween(...) TweenService:Create(...):Play() end
                 Frame.BorderColor3 = COL3RGB(30, 30, 30)
                 Frame.Position = UDIM2(0, 30, 0, 40)
                 Frame.Size = UDIM2(0, 175, 0, 16 * amount)
-                Frame.BottomImage = "http://www.roblox.com/asset/?id=175158447"
                 Frame.CanvasSize = UDIM2(1, 1, 1, 1)
-                Frame.MidImage = "http://www.roblox.com/asset/?id=175158447"
                 Frame.ScrollBarThickness = 0
-                Frame.TopImage = "http://www.roblox.com/asset/?id=175158447"
                 Frame.AutomaticCanvasSize = "Y"
                 Frame.ScrollBarImageColor3 = COL3RGB(255, 255, 255)
 
@@ -2334,7 +2418,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
                   Button.Position = UDIM2(0, 30, 0, 16)
                   Button.Size = UDIM2(1, 0, 0, 16)
                   Button.AutoButtonColor = false
-                  Button.Font = Enum.Font.SourceSans
+                  Button.Font = Enum.Font.Gotham
                   Button.Text = ""
                   Button.TextColor3 = COL3RGB(0, 0, 0)
                   Button.TextSize = 14.000
@@ -2345,7 +2429,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
                   TextLabel.BorderColor3 = COL3RGB(30, 30, 30)
                   TextLabel.Position = UDIM2(0, 4, 0, -1)
                   TextLabel.Size = UDIM2(1, 1, 1, 1)
-                  TextLabel.Font = Enum.Font.Code
+                  TextLabel.Font = Enum.Font.Gotham
                   TextLabel.Text = v
                   TextLabel.TextColor3 = COL3RGB(200, 200, 200)
                   TextLabel.TextSize = 14.000
@@ -2372,7 +2456,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
                   end)
                   Button.MouseEnter:Connect(function()
                   if Element.value.Scroll[joell] ~= v then
-                    library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(255, 255, 255)})
+                    library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(178, 102, 255)})
                   end
                   end)
                   Button.MouseLeave:Connect(function()
@@ -2390,14 +2474,13 @@ function library:Tween(...) TweenService:Create(...):Play() end
             ImageLabel.BackgroundTransparency = 1.000
             ImageLabel.Position = UDIM2(0, 165, 0, 6)
             ImageLabel.Size = UDIM2(0, 6, 0, 4)
-            ImageLabel.Image = "http://www.roblox.com/asset/?id=6724771531"
 
             TextLabel_3.Parent = Dropdown
             TextLabel_3.BackgroundColor3 = COL3RGB(255, 255, 255)
             TextLabel_3.BackgroundTransparency = 1.000
             TextLabel_3.Position = UDIM2(0, 32, 0, -1)
             TextLabel_3.Size = UDIM2(0.111913361, 208, 0.382215232, 0)
-            TextLabel_3.Font = Enum.Font.Code
+            TextLabel_3.Font = Enum.Font.Gotham
             TextLabel_3.Text = text
             TextLabel_3.TextColor3 = COL3RGB(200, 200, 200)
             TextLabel_3.TextSize = 14.000
@@ -2477,7 +2560,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
 
             Scroll.Name = "Scroll"
             Scroll.Parent = Inner
-            Scroll.BackgroundColor3 = COL3RGB(255, 255, 255)
+            Scroll.BackgroundColor3 = COL3RGB(0, 0, 0) -- Gotham
             Scroll.BackgroundTransparency = 1.000
             Scroll.Position = UDIM2(0, 0, 00, 0)
             Scroll.Size = UDIM2(1, 0, 0, amount * 16 + 8)
@@ -2490,11 +2573,8 @@ function library:Tween(...) TweenService:Create(...):Play() end
             Frame.BorderColor3 = COL3RGB(30, 30, 30)
             Frame.Position = UDIM2(0, 30, 0, 0)
             Frame.Size = UDIM2(0, 175, 0, 16 * amount)
-            Frame.BottomImage = "http://www.roblox.com/asset/?id=175158447"
             Frame.CanvasSize = UDIM2(1, 1, 1, 1)
-            Frame.MidImage = "http://www.roblox.com/asset/?id=175158447"
             Frame.ScrollBarThickness = 0
-            Frame.TopImage = "http://www.roblox.com/asset/?id=175158447"
             Frame.AutomaticCanvasSize = "Y"
             Frame.ScrollBarImageColor3 = COL3RGB(255, 255, 255)
 
@@ -2514,7 +2594,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
               Button.Position = UDIM2(0, 30, 0, 16)
               Button.Size = UDIM2(1, 0, 0, 16)
               Button.AutoButtonColor = false
-              Button.Font = Enum.Font.SourceSans
+              Button.Font = Enum.Font.Gotham
               Button.Text = ""
               Button.TextColor3 = COL3RGB(0, 0, 0)
               Button.TextSize = 14.000
@@ -2525,7 +2605,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
               TextLabel.BorderColor3 = COL3RGB(30, 30, 30)
               TextLabel.Position = UDIM2(0, 4, 0, -1)
               TextLabel.Size = UDIM2(1, 1, 1, 1)
-              TextLabel.Font = Enum.Font.Code
+              TextLabel.Font = Enum.Font.Gotham
               TextLabel.Text = v
               TextLabel.TextColor3 = COL3RGB(200, 200, 200)
               TextLabel.TextSize = 14.000
@@ -2551,7 +2631,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
             end)
             Button.MouseEnter:Connect(function()
             if Element.value.Scroll ~= v then
-              library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(255, 255, 255)})
+              library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(178, 102, 255)})
             end
             end)
             Button.MouseLeave:Connect(function()
@@ -2592,7 +2672,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
 
           Dropdown.Name = "Dropdown"
           Dropdown.Parent = Inner
-          Dropdown.BackgroundColor3 = COL3RGB(1, 1, 1)
+          Dropdown.BackgroundColor3 = COL3RGB(25, 0, 51)
           Dropdown.BackgroundTransparency = 1.000
           Dropdown.Position = UDIM2(0, 0, 0.255102038, 0)
           Dropdown.Size = UDIM2(1, 0, 0, 39)
@@ -2601,11 +2681,11 @@ function library:Tween(...) TweenService:Create(...):Play() end
           Button.Parent = Dropdown
           Button.BorderColor3 = COL3RGB(0, 0, 0)
           Button.BorderSizePixel = 1
-          Button.BackgroundColor3 = COL3RGB(25, 25, 25)
+          Button.BackgroundColor3 = COL3RGB(25, 0, 51)
           Button.Position = UDIM2(0, 30, 0, 16)
           Button.Size = UDIM2(0, 175, 0, 17)
           Button.AutoButtonColor = false
-          Button.Font = Enum.Font.SourceSans
+          Button.Font = Enum.Font.Gotham
           Button.Text = ""
           Button.TextColor3 = COL3RGB(0, 0, 0)
           Button.TextSize = 14.000
@@ -2616,7 +2696,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
           TextLabel.BorderColor3 = COL3RGB(30, 30, 30)
           TextLabel.Position = UDIM2(0, 5, 0, 0)
           TextLabel.Size = UDIM2(-0.21714285, 208, 1, 0)
-          TextLabel.Font = Enum.Font.Code
+          TextLabel.Font = Enum.Font.Gotham
           TextLabel.Text = "..."
           TextLabel.TextColor3 = COL3RGB(200, 200, 200)
           TextLabel.TextSize = 14.000
@@ -2627,17 +2707,14 @@ function library:Tween(...) TweenService:Create(...):Play() end
           Drop.Name = "Drop"
           Drop.Parent = Button
           Drop.Active = true
-          Drop.BackgroundColor3 = COL3RGB(25, 25, 25)
+          Drop.BackgroundColor3 = COL3RGB(25, 0, 51)
           Drop.BorderColor3 = COL3RGB(0, 0, 0)
           Drop.BorderSizePixel = 1
           Drop.Position = UDIM2(0, 0, 1, 1)
           Drop.Size = UDIM2(1, 0, 0, 20)
           Drop.Visible = false
-          Drop.BottomImage = "http://www.roblox.com/asset/?id=175158447"
           Drop.CanvasSize = UDIM2(1, 1, 1, 1)
           Drop.ScrollBarThickness = 0
-          Drop.TopImage = "http://www.roblox.com/asset/?id=175158447"
-          Drop.MidImage = "http://www.roblox.com/asset/?id=175158447"
           --Drop.AutomaticCanvasSize = "Y"
           for i,v in pairs(data.options) do
             Drop.CanvasSize = Drop.CanvasSize + UDIM2(0, 0, 0, 17)
@@ -2701,25 +2778,25 @@ function library:Tween(...) TweenService:Create(...):Play() end
 
               Button.Name = v
               Button.Parent = Drop
-              Button.BackgroundColor3 = COL3RGB(1, 1, 1)
+              Button.BackgroundColor3 = COL3RGB(0, 0, 0)
               Button.BorderColor3 = COL3RGB(0, 0, 0)
               Button.Position = UDIM2(0, 30, 0, 16)
               Button.Size = UDIM2(0, 175, 0, 17)
               Button.AutoButtonColor = false
-              Button.Font = Enum.Font.SourceSans
+              Button.Font = Enum.Font.Gotham
               Button.Text = ""
               Button.TextColor3 = COL3RGB(0, 0, 0)
               Button.TextSize = 14.000
-              Button.BorderSizePixel = 1
+              Button.BorderSizePixel = 0
               Button.ZIndex = 6
 
               TextLabel.Parent = Button
               TextLabel.BackgroundColor3 = COL3RGB(255, 255, 255)
               TextLabel.BackgroundTransparency = 1.000
-              TextLabel.BorderColor3 = COL3RGB(30, 30, 30)
+              TextLabel.BorderColor3 = COL3RGB(0, 0, 0)
               TextLabel.Position = UDIM2(0, 5, 0, -1)
               TextLabel.Size = UDIM2(-0.21714285, 208, 1, 0)
-              TextLabel.Font = Enum.Font.Code
+              TextLabel.Font = Enum.Font.Gotham
               TextLabel.Text = v
               TextLabel.TextColor3 = COL3RGB(200, 200, 200)
               TextLabel.TextSize = 14.000
@@ -2733,10 +2810,10 @@ function library:Tween(...) TweenService:Create(...):Play() end
                     TBLREMOVE(Element.value.Jumbobox, i)
                   end
                 end
-                library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(255, 255, 255)})
+                library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(178, 102, 255)})
               else
                 INSERT(Element.value.Jumbobox, v)
-                library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(255, 255, 255)})
+                library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(178, 102, 255)})
               end
               updatetext()
 
@@ -2745,7 +2822,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
               end)
               Button.MouseEnter:Connect(function()
               if not TBLFIND(Element.value.Jumbobox, v) then
-                library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(255, 255, 255)})
+                library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(178, 102, 255)})
               end
               end)
               Button.MouseLeave:Connect(function()
@@ -2762,7 +2839,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
             for i,v in pairs(Drop:GetChildren()) do
               if v.Name ~= "UIListLayout" then
                 if TBLFIND(val.Jumbobox, v.Name) then
-                  v.TextLabel.TextColor3 = COL3RGB(255, 255, 255)
+                  v.TextLabel.TextColor3 = COL3RGB(178, 102, 255)
                 else
                   v.TextLabel.TextColor3 = COL3RGB(200, 200, 200)
                 end
@@ -2781,14 +2858,13 @@ function library:Tween(...) TweenService:Create(...):Play() end
           ImageLabel.BackgroundTransparency = 1.000
           ImageLabel.Position = UDIM2(0, 165, 0, 6)
           ImageLabel.Size = UDIM2(0, 6, 0, 4)
-          ImageLabel.Image = "http://www.roblox.com/asset/?id=6724771531"
 
           TextLabel_3.Parent = Dropdown
           TextLabel_3.BackgroundColor3 = COL3RGB(255, 255, 255)
           TextLabel_3.BackgroundTransparency = 1.000
           TextLabel_3.Position = UDIM2(0, 32, 0, -1)
           TextLabel_3.Size = UDIM2(0.111913361, 208, 0.382215232, 0)
-          TextLabel_3.Font = Enum.Font.Code
+          TextLabel_3.Font = Enum.Font.Gotham
           TextLabel_3.Text = text
           TextLabel_3.TextColor3 = COL3RGB(200, 200, 200)
           TextLabel_3.TextSize = 14.000
@@ -2842,7 +2918,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
           Button.BackgroundColor3 = COL3RGB(255, 255, 255)
           Button.BackgroundTransparency = 1.000
           Button.Size = UDIM2(1, 0, 1, 0)
-          Button.Font = Enum.Font.SourceSans
+          Button.Font = Enum.Font.Gotham
           Button.Text = ""
           Button.TextColor3 = COL3RGB(0, 0, 0)
           Button.TextSize = 14.000
@@ -2859,7 +2935,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
           TextLabel.BackgroundTransparency = 1.000
           TextLabel.Position = UDIM2(0, 32, 0, -1)
           TextLabel.Size = UDIM2(0.111913361, 208, 1, 0)
-          TextLabel.Font = Enum.Font.Code
+          TextLabel.Font = Enum.Font.Gotham
           TextLabel.Text = text
           TextLabel.TextColor3 = COL3RGB(200, 200, 200)
           TextLabel.TextSize = 14.000
@@ -2867,8 +2943,8 @@ function library:Tween(...) TweenService:Create(...):Play() end
 
           local function update()
             if Element.value.Toggle then
-              tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = COL3RGB(255, 255, 255)})
-              library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(255, 255, 255)})
+              tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = COL3RGB(178, 102, 255)})
+              library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(178, 102, 255)})
             else
               keybindremove(text)
               tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = COL3RGB(1, 1, 1)})
@@ -2905,9 +2981,9 @@ function library:Tween(...) TweenService:Create(...):Play() end
             Keybind.Position = UDIM2(0, 270, 0.5, -6)
             Keybind.Text = "NONE"
             Keybind.Size = UDIM2(0, 43, 0, 12)
-            Keybind.Size = UDIM2(0,txt:GetTextSize("NONE", 14, Enum.Font.Code, Vec2(700, 12)).X + 5,0, 12)
+            Keybind.Size = UDIM2(0,txt:GetTextSize("NONE", 14, Enum.Font.Gotham, Vec2(700, 12)).X + 5,0, 12)
             Keybind.AutoButtonColor = false
-            Keybind.Font = Enum.Font.Code
+            Keybind.Font = Enum.Font.Gotham
             Keybind.TextColor3 = COL3RGB(200, 200, 200)
             Keybind.TextSize = 14.000
             Keybind.AnchorPoint = Vec2(1,0)
@@ -2929,7 +3005,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
             Always.Position = UDIM2(-3.03289485, 231, 0.115384616, -6)
             Always.Size = UDIM2(1, 0, 0, 16)
             Always.AutoButtonColor = false
-            Always.Font = Enum.Font.SourceSansBold
+            Always.Font = Enum.Font.GothamBold
             Always.Text = "Always"
             Always.TextColor3 = COL3RGB(255, 255, 255)
             Always.TextSize = 14.000
@@ -2947,7 +3023,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
             Hold.Position = UDIM2(-3.03289485, 231, 0.115384616, -6)
             Hold.Size = UDIM2(1, 0, 0, 16)
             Hold.AutoButtonColor = false
-            Hold.Font = Enum.Font.Code
+            Hold.Font = Enum.Font.Gotham
             Hold.Text = "Hold"
             Hold.TextColor3 = COL3RGB(200, 200, 200)
             Hold.TextSize = 14.000
@@ -2961,7 +3037,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
             Toggle.Position = UDIM2(-3.03289485, 231, 0.115384616, -6)
             Toggle.Size = UDIM2(1, 0, 0, 16)
             Toggle.AutoButtonColor = false
-            Toggle.Font = Enum.Font.Code
+            Toggle.Font = Enum.Font.Gotham
             Toggle.Text = "Toggle"
             Toggle.TextColor3 = COL3RGB(200, 200, 200)
             Toggle.TextSize = 14.000
@@ -2981,17 +3057,17 @@ function library:Tween(...) TweenService:Create(...):Play() end
                 end
                 for _,button in pairs(Frame:GetChildren()) do
                   if button:IsA("TextButton") and button.Text ~= Element.value.Type then
-                    button.Font = Enum.Font.Code
+                    button.Font = Enum.Font.Gotham
                     library:Tween(button, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(200,200,200)})
                   end
                 end
-                button.Font = Enum.Font.SourceSansBold
+                button.Font = Enum.Font.GothamBold
                 button.TextColor3 = COL3RGB(255, 255, 255)
                 values[tabname][sectorname][text] = Element.value
                 end)
                 button.MouseEnter:Connect(function()
                 if Element.value.Type ~= button.Text then
-                  library:Tween(button, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(255, 255, 255)})
+                  library:Tween(button, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(178, 102, 255)})
                 end
                 end)
                 button.MouseLeave:Connect(function()
@@ -3006,7 +3082,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
               wait()
               binding = true
               Keybind.Text = "..."
-              Keybind.Size = UDIM2(0,txt:GetTextSize("...", 14, Enum.Font.Code, Vec2(700, 12)).X + 4,0, 12)
+              Keybind.Size = UDIM2(0,txt:GetTextSize("...", 14, Enum.Font.Gotham, Vec2(700, 12)).X + 4,0, 12)
             end
             end)
             Keybind.MouseButton2Down:Connect(function()
@@ -3039,11 +3115,11 @@ function library:Tween(...) TweenService:Create(...):Play() end
             if binding then
               binding = false
               Keybind.Text = input.KeyCode.Name ~= "Unknown" and input.KeyCode.Name:upper() or input.UserInputType.Name:upper()
-              Keybind.Size = UDIM2(0,txt:GetTextSize(Keybind.Text, 14, Enum.Font.Code, Vec2(700, 12)).X + 5,0, 12)
+              Keybind.Size = UDIM2(0,txt:GetTextSize(Keybind.Text, 14, Enum.Font.Gotham, Vec2(700, 12)).X + 5,0, 12)
               Element.value.Key = input.KeyCode.Name ~= "Unknown" and input.KeyCode.Name or input.UserInputType.Name
               if input.KeyCode.Name == "Backspace" then
                 Keybind.Text = "NONE"
-                Keybind.Size = UDIM2(0,txt:GetTextSize(Keybind.Text, 14, Enum.Font.Code, Vec2(700, 12)).X + 4,0, 12)
+                Keybind.Size = UDIM2(0,txt:GetTextSize(Keybind.Text, 14, Enum.Font.Gotham, Vec2(700, 12)).X + 4,0, 12)
                 Element.value.Key = nil
                 Element.value.Active = true
               end
@@ -3152,7 +3228,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
           Button.BackgroundColor3 = COL3RGB(255, 255, 255)
           Button.BackgroundTransparency = 1.000
           Button.Size = UDIM2(1, 0, 1, 0)
-          Button.Font = Enum.Font.SourceSans
+          Button.Font = Enum.Font.Gotham
           Button.Text = ""
           Button.TextColor3 = COL3RGB(0, 0, 0)
           Button.TextSize = 14.000
@@ -3169,7 +3245,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
           TextLabel.BackgroundTransparency = 1.000
           TextLabel.Position = UDIM2(0, 32, 0, -1)
           TextLabel.Size = UDIM2(0.111913361, 208, 1, 0)
-          TextLabel.Font = Enum.Font.Code
+          TextLabel.Font = Enum.Font.Gotham
           TextLabel.Text = text
           TextLabel.TextColor3 = COL3RGB(200, 200, 200)
           TextLabel.TextSize = 14.000
@@ -3177,8 +3253,8 @@ function library:Tween(...) TweenService:Create(...):Play() end
 
           local function update()
             if Element.value.Toggle then
-              tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = COL3RGB(255, 255, 255)})
-              library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(255, 255, 255)})
+              tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = COL3RGB(178, 102, 255)})
+              library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(178, 102, 255)})
             else
               tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = COL3RGB(1, 1, 1)})
               library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(200, 200, 200)})
@@ -3222,7 +3298,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
           Button.BackgroundColor3 = COL3RGB(255, 255, 255)
           Button.BackgroundTransparency = 1.000
           Button.Size = UDIM2(1, 0, 1, 0)
-          Button.Font = Enum.Font.SourceSans
+          Button.Font = Enum.Font.Gotham
           Button.Text = ""
           Button.TextColor3 = COL3RGB(0, 0, 0)
           Button.TextSize = 14.000
@@ -3239,7 +3315,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
           TextLabel.BackgroundTransparency = 1.000
           TextLabel.Position = UDIM2(0, 32, 0, -1)
           TextLabel.Size = UDIM2(0.111913361, 208, 1, 0)
-          TextLabel.Font = Enum.Font.Code
+          TextLabel.Font = Enum.Font.Gotham
           TextLabel.Text = text
           TextLabel.TextColor3 = COL3RGB(200, 200, 200)
           TextLabel.TextSize = 14.000
@@ -3247,8 +3323,8 @@ function library:Tween(...) TweenService:Create(...):Play() end
 
           local function update()
             if Element.value.Toggle then
-              tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = COL3RGB(255, 255, 255)})
-              library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(255, 255, 255)})
+              tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = COL3RGB(178, 102, 255)})
+              library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(178, 102, 255)})
             else
               tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = COL3RGB(1, 1, 1)})
               library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(200, 200, 200)})
@@ -3273,7 +3349,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
           ColorP.Position = UDIM2(0, 270, 0.5, -4)
           ColorP.Size = UDIM2(0, 18, 0, 8)
           ColorP.AutoButtonColor = false
-          ColorP.Font = Enum.Font.Code
+          ColorP.Font = Enum.Font.Gotham
           ColorP.Text = ""
           ColorP.TextColor3 = COL3RGB(200, 200, 200)
           ColorP.TextSize = 14.000
@@ -3483,7 +3559,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
           Button.BackgroundColor3 = COL3RGB(255, 255, 255)
           Button.BackgroundTransparency = 1.000
           Button.Size = UDIM2(1, 0, 1, 0)
-          Button.Font = Enum.Font.SourceSans
+          Button.Font = Enum.Font.Gotham
           Button.Text = ""
           Button.TextColor3 = COL3RGB(0, 0, 0)
           Button.TextSize = 14.000
@@ -3500,7 +3576,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
           TextLabel.BackgroundTransparency = 1.000
           TextLabel.Position = UDIM2(0, 32, 0, -1)
           TextLabel.Size = UDIM2(0.111913361, 208, 1, 0)
-          TextLabel.Font = Enum.Font.Code
+          TextLabel.Font = Enum.Font.Gotham
           TextLabel.Text = text
           TextLabel.TextColor3 = COL3RGB(200, 200, 200)
           TextLabel.TextSize = 14.000
@@ -3508,8 +3584,8 @@ function library:Tween(...) TweenService:Create(...):Play() end
 
           local function update()
             if Element.value.Toggle then
-              tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = COL3RGB(255, 255, 255)})
-              library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(255, 255, 255)})
+              tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = COL3RGB(178, 102, 255)})
+              library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(178, 102, 255)})
             else
               tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = COL3RGB(1, 1, 1)})
               library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(200, 200, 200)})
@@ -3535,7 +3611,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
           ColorP.Position = UDIM2(0, 270, 0.5, -4)
           ColorP.Size = UDIM2(0, 18, 0, 8)
           ColorP.AutoButtonColor = false
-          ColorP.Font = Enum.Font.Code
+          ColorP.Font = Enum.Font.Gotham
           ColorP.Text = ""
           ColorP.TextColor3 = COL3RGB(200, 200, 200)
           ColorP.TextSize = 14.000
@@ -3764,8 +3840,8 @@ function library:Tween(...) TweenService:Create(...):Play() end
           end)
           if data.default then
             if Element.value.Toggle then
-              tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = COL3RGB(255, 255, 255)})
-              library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(255, 255, 255)})
+              tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = COL3RGB(178, 102, 255)})
+              library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(178, 102, 255)})
             else
               tween = library:Tween(Color, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundColor3 = COL3RGB(1, 1, 1)})
               library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 = COL3RGB(200, 200, 200)})
@@ -3802,11 +3878,11 @@ function library:Tween(...) TweenService:Create(...):Play() end
           Box.Size = UDIM2(1, 0, 0, 30)
 
           TextBox.Parent = Box
-          TextBox.BackgroundColor3 = COL3RGB(20, 20, 20)
-          TextBox.BorderColor3 = COL3RGB(30, 30, 30)
+          TextBox.BackgroundColor3 = COL3RGB(0, 0, 0)
+          TextBox.BorderColor3 = COL3RGB(0, 0, 0)
           TextBox.Position = UDIM2(0.108303241, 0, 0.224465579, 0)
           TextBox.Size = UDIM2(0, 175, 0, 20)
-          TextBox.Font = Enum.Font.SourceSans
+          TextBox.Font = Enum.Font.Gotham
           TextBox.PlaceholderText = data.placeholder
           TextBox.Text = Element.value.Text
           TextBox.TextColor3 = COL3RGB(255, 255, 255)
@@ -3852,13 +3928,13 @@ function library:Tween(...) TweenService:Create(...):Play() end
 
           Button.Name = "Button"
           Button.Parent = Dropdown
-          Button.BackgroundColor3 = COL3RGB(25, 25, 25)
+          Button.BackgroundColor3 = COL3RGB(25, 0, 51)
           Button.BorderColor3 = COL3RGB(0, 0, 0)
           Button.BorderSizePixel = 1
           Button.Position = UDIM2(0, 30, 0, 16)
           Button.Size = UDIM2(0, 175, 0, 17)
           Button.AutoButtonColor = false
-          Button.Font = Enum.Font.SourceSans
+          Button.Font = Enum.Font.Gotham
           Button.Text = ""
           Button.TextColor3 = COL3RGB(0, 0, 0)
           Button.TextSize = 14.000
@@ -3869,7 +3945,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
           TextLabel.BorderColor3 = COL3RGB(30, 30, 30)
           TextLabel.Position = UDIM2(0, 5, 0, 0)
           TextLabel.Size = UDIM2(-0.21714285, 208, 1, 0)
-          TextLabel.Font = Enum.Font.Code
+          TextLabel.Font = Enum.Font.Gotham
           TextLabel.Text = Element.value.Dropdown
           TextLabel.TextColor3 = COL3RGB(200, 200, 200)
           TextLabel.TextSize = 14.000
@@ -3880,17 +3956,14 @@ function library:Tween(...) TweenService:Create(...):Play() end
           Drop.Name = "Drop"
           Drop.Parent = Button
           Drop.Active = true
-          Drop.BackgroundColor3 = COL3RGB(25, 25, 25)
+          Drop.BackgroundColor3 = COL3RGB(25, 0, 51)
           Drop.BorderColor3 = COL3RGB(0, 0, 0)
           Drop.BorderSizePixel = 1
           Drop.Position = UDIM2(0, 0, 1, 1)
           Drop.Size = UDIM2(1, 0, 0, 20)
           Drop.Visible = false
-          Drop.BottomImage = "http://www.roblox.com/asset/?id=175158447"
           Drop.CanvasSize = UDIM2(1, 1, 1, 1)
           Drop.ScrollBarThickness = 0
-          Drop.TopImage = "http://www.roblox.com/asset/?id=175158447"
-          Drop.MidImage = "http://www.roblox.com/asset/?id=175158447"
           Drop.AutomaticCanvasSize = "Y"
           Drop.ZIndex = 5
           Drop.ScrollBarImageColor3 = COL3RGB(255, 255, 255)
@@ -3918,7 +3991,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
               Button.Position = UDIM2(0, 30, 0, 16)
               Button.Size = UDIM2(0, 175, 0, 17)
               Button.AutoButtonColor = false
-              Button.Font = Enum.Font.SourceSans
+              Button.Font = Enum.Font.Gotham
               Button.Text = ""
               Button.TextColor3 = COL3RGB(0, 0, 0)
               Button.TextSize = 14.000
@@ -3931,7 +4004,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
               TextLabel.BorderColor3 = COL3RGB(30, 30, 30)
               TextLabel.Position = UDIM2(0, 5, 0, -1)
               TextLabel.Size = UDIM2(-0.21714285, 208, 1, 0)
-              TextLabel.Font = Enum.Font.Code
+              TextLabel.Font = Enum.Font.Gotham
               TextLabel.Text = v
               TextLabel.TextColor3 = COL3RGB(200, 200, 200)
               TextLabel.TextSize = 14.000
@@ -3947,7 +4020,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
               Drop.CanvasPosition = Vec2(0,0)
               end)
               Button.MouseEnter:Connect(function()
-              library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 =  COL3RGB(255, 255, 255)})
+              library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 =  COL3RGB(178, 102, 255)})
               end)
               Button.MouseLeave:Connect(function()
               library:Tween(TextLabel, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextColor3 =  COL3RGB(200, 200, 200)})
@@ -3969,14 +4042,13 @@ function library:Tween(...) TweenService:Create(...):Play() end
           ImageLabel.BackgroundTransparency = 1.000
           ImageLabel.Position = UDIM2(0, 165, 0, 6)
           ImageLabel.Size = UDIM2(0, 6, 0, 4)
-          ImageLabel.Image = "http://www.roblox.com/asset/?id=6724771531"
 
           TextLabel_3.Parent = Dropdown
           TextLabel_3.BackgroundColor3 = COL3RGB(255, 255, 255)
           TextLabel_3.BackgroundTransparency = 1.000
           TextLabel_3.Position = UDIM2(0, 32, 0, -1)
           TextLabel_3.Size = UDIM2(0.111913361, 208, 0.382215232, 0)
-          TextLabel_3.Font = Enum.Font.Code
+          TextLabel_3.Font = Enum.Font.Gotham
           TextLabel_3.Text = text
           TextLabel_3.TextColor3 = COL3RGB(200, 200, 200)
           TextLabel_3.TextSize = 14.000
@@ -4034,7 +4106,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
           TextLabel.BackgroundTransparency = 1.000
           TextLabel.Position = UDIM2(0, 32, 0, -2)
           TextLabel.Size = UDIM2(0, 100, 0, 15)
-          TextLabel.Font = Enum.Font.Code
+          TextLabel.Font = Enum.Font.Gotham
           TextLabel.Text = text
           TextLabel.TextColor3 = COL3RGB(200, 200, 200)
           TextLabel.TextSize = 14.000
@@ -4042,13 +4114,13 @@ function library:Tween(...) TweenService:Create(...):Play() end
 
           Button.Name = "Button"
           Button.Parent = Slider
-          Button.BackgroundColor3 = COL3RGB(10, 10, 10)
+          Button.BackgroundColor3 = COL3RGB(1, 1, 1)
           Button.BorderColor3 = COL3RGB(0, 0, 0)
           Button.BorderSizePixel = 1
           Button.Position = UDIM2(0, 30, 0, 15)
           Button.Size = UDIM2(0, 175, 0, 11)
           Button.AutoButtonColor = false
-          Button.Font = Enum.Font.SourceSans
+          Button.Font = Enum.Font.Gotham
           Button.Text = ""
           Button.TextColor3 = COL3RGB(0, 0, 0)
           Button.TextSize = 14.000
@@ -4058,7 +4130,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
           Frame.BorderSizePixel = 1
           Frame.Size = UDIM2(0.5, 0, 1, 0)
 
-          UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, COL3RGB(255, 255, 255)), ColorSequenceKeypoint.new(1, COL3RGB(175, 175, 175))}
+          UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0, COL3RGB(178, 102, 255)), ColorSequenceKeypoint.new(1, COL3RGB(178, 102, 255))}
           UIGradient.Rotation = 90
           UIGradient.Parent = Frame
 
@@ -4068,7 +4140,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
           Value.BackgroundTransparency = 1.000
           Value.Position = UDIM2(0, 150, 0, -1)
           Value.Size = UDIM2(0, 55, 0, 15)
-          Value.Font = Enum.Font.Code
+          Value.Font = Enum.Font.Gotham
           Value.Text = "50"
           Value.TextColor3 = COL3RGB(200, 200, 200)
           Value.TextSize = 14.000
@@ -4143,13 +4215,13 @@ function library:Tween(...) TweenService:Create(...):Play() end
 
           Button_2.Name = "Button"
           Button_2.Parent = Button
-          Button_2.BackgroundColor3 = COL3RGB(25, 25, 25)
+          Button_2.BackgroundColor3 = COL3RGB(25, 0, 51)
           Button_2.BorderColor3 = COL3RGB(0, 0, 0)
           Button_2.BorderSizePixel = 1
           Button_2.Position = UDIM2(0, 30, 0.5, -9)
           Button_2.Size = UDIM2(0, 175, 0, 18)
           Button_2.AutoButtonColor = false
-          Button_2.Font = Enum.Font.SourceSans
+          Button_2.Font = Enum.Font.Gotham
           Button_2.Text = ""
           Button_2.TextColor3 = COL3RGB(0, 0, 0)
           Button_2.TextSize = 14.000
@@ -4159,7 +4231,7 @@ function library:Tween(...) TweenService:Create(...):Play() end
           TextLabel.BackgroundTransparency = 1.000
           TextLabel.BorderColor3 = COL3RGB(30, 30, 30)
           TextLabel.Size = UDIM2(1, 0, 1, 0)
-          TextLabel.Font = Enum.Font.Code
+          TextLabel.Font = Enum.Font.Gotham
           TextLabel.Text = text
           TextLabel.TextColor3 = COL3RGB(200, 200, 200)
           TextLabel.TextSize = 14.000
@@ -4807,9 +4879,9 @@ repeat RunService.RenderStepped:Wait() until game:IsLoaded()
     end
   end
 
-  local Models = game:GetObjects("rbxassetid://8356647750")[1]
+  local Models = game:GetObjects("rbxassetid://7285197035")[1]
   repeat wait() until Models ~= nil
-    local ChrModels = game:GetObjects("rbxassetid://8370129931")[1]
+    local ChrModels = game:GetObjects("rbxassetid://7642937303")[1]
     repeat wait() until ChrModels ~= nil
 
 
@@ -4899,7 +4971,7 @@ repeat RunService.RenderStepped:Wait() until game:IsLoaded()
       end
 
       RunService.RenderStepped:Wait()
-      local gui = library:New("bloxware.xyz+ // v0.5 // rip bloxware")
+      local gui = library:New("Kabanware")
       local legit = gui:Tab("legit")
       local rage = gui:Tab("rage")
       local aatab = gui:Tab("anti-aim")
@@ -5497,7 +5569,8 @@ end
 end
 end)
 self:Element("Toggle", "no arm third person")
-self:Element("Slider", "distance", {min = 6, max = 18, default = 12}, function(tbl)
+
+self:Element("Slider", "distance", {min = 6, max = 18, default = 12}, function(tbl) --if values.visuals.self["third person"].Toggle and values.visuals.self["third person"].Active and values.visuals.self["no arm third person"].Toggle and LocalPlayer.Character then        args[1] = args[1] * CF(99, 99, 99) 
 if LocalPlayer.Character and LocalPlayer.Character:FindFirstChild("Humanoid") then
 if values.visuals.self["third person"].Toggle then
   if values.visuals.self["third person"].Active then
@@ -5776,7 +5849,7 @@ end
 end)
 world:Element("ToggleColor", "impacts", {default = {Color = COL3RGB(255, 255, 255)}})
 world:Element("ToggleColor", "hit chams", {default = {Color = COL3RGB(255, 255, 255)}})
-world:Element("Dropdown", "hitsound", {options = {"none", "moan", "moan2", "moan3", "moan4", "skeet", "neverlose", "rust", "bag", "baimware", "bruh", "MC \"ouh!\"" , "ding"}})
+world:Element("Dropdown", "hitsound", {options = {"none", "moan", "moan2", "moan3", "moan4", "skeet", "neverlose", "rust", "bag", "baimware", "bruh", "ouh!" , "ding"}})
 world:Element("Slider", "sound volume", {min = 1, max = 5, default = 3})
 world:Element("Dropdown", "skybox", {options = {"None", "Nebula", "Minecraft", "Vaporwave", "Clouds", "Purple Nebula", "Night Sky", "Pink Daylight", "Morning Glow", "Setting Sun", "Fade Blue", "Elegant Morning", "Neptune", "Redshift", "Aesthetic Night", "Red-Mountain", "Cloudy Skies", "Dark Blue", "Pink Daylight", "Night", "Space", "Pink Vision", "animeskybox", "Alien Red", "CS City", "Dark City", "Earth", "Mountains", "Old Skybox", "Red Sky", "Red Sky 2", "Wasteland", "Bobux Generator", "Blue Sky", "Green Sky"}}, function(tbl)
 local sky = tbl.Dropdown
@@ -5854,10 +5927,10 @@ crosshaireditor:Element("Toggle", "border", nil, UpdateCrosshair)
 local client = misc:Sector("client", "Right")
 client:Element("Toggle", "infinite cash", nil, function(tbl)
 if tbl.Toggle then
-LocalPlayer.Cash.Value = "locqs#5406"
+LocalPlayer.Cash.Value = "cock"
 end
 end)
-client:Element("Toggle", "watermark (doesn't show in the menu)", {}, function(tbl)   
+client:Element("Toggle", "Kabanware", {}, function(tbl)   
 					if tbl.Toggle then
 						local ScreenGui = Instance.new("ScreenGui")
 						local Frame = Instance.new("Frame")
@@ -5870,9 +5943,7 @@ client:Element("Toggle", "watermark (doesn't show in the menu)", {}, function(tb
 						local TextLabel_6 = Instance.new("TextLabel")
 						local TextLabel_7 = Instance.new("TextLabel")
 						local TextLabel_8 = Instance.new("TextLabel")
-						local TextLabel_9 = Instance.new("TextLabel")
-						local TextLabel_10 = Instance.new("TextLabel")
-						local TextLabel_11 = Instance.new("TextLabel")
+						local UIGradient = Instance.new("UIGradient")
 						ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 						ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 						
@@ -5883,7 +5954,7 @@ client:Element("Toggle", "watermark (doesn't show in the menu)", {}, function(tb
 						Frame.Size = UDim2.new(0, 325, 0, 1)
 						
 						Frame_2.Parent = Frame
-						Frame_2.BackgroundColor3 = Color3.fromRGB(13, 14, 22)
+						Frame_2.BackgroundColor3 = Color3.fromRGB(41, 0, 56)
 						Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 						Frame_2.Position = UDim2.new(0, 0, 1, 2)
 						Frame_2.Size = UDim2.new(0, 325, 0, 18)
@@ -5891,128 +5962,99 @@ client:Element("Toggle", "watermark (doesn't show in the menu)", {}, function(tb
 						TextLabel.Parent = Frame_2
 						TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 						TextLabel.BackgroundTransparency = 1.000
-						TextLabel.Position = UDim2.new(0, 0, -0.125555556, 0)
-						TextLabel.Size = UDim2.new(0, 16, 0, 18)
-						TextLabel.Font = Enum.Font.SourceSans
-						TextLabel.Text = "B"
+						TextLabel.Position = UDim2.new(0.1055509151, 0, -0.111111112, 0)
+						TextLabel.Size = UDim2.new(0, 30, 0, 20)
+						TextLabel.Font = Enum.Font.Gotham
+						TextLabel.Text = "Kabanware"
 						TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-						TextLabel.TextSize = 14.000
+						TextLabel.TextSize = 12.000
 						TextLabel.TextStrokeTransparency = 0.000
 						
 						TextLabel_2.Parent = Frame_2
 						TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 						TextLabel_2.BackgroundTransparency = 1.000
-						TextLabel_2.Position = UDim2.new(0.02610966, 0, -0.055555556, 0)
-						TextLabel_2.Size = UDim2.new(0, 12, 0, 18)
-						TextLabel_2.Font = Enum.Font.SourceSans
-						TextLabel_2.Text = "W"
+						TextLabel_2.Position = UDim2.new(0.208495268, 0, -0.111111112, 0)
+						TextLabel_2.Size = UDim2.new(0, 40, 0, 20)
+						TextLabel_2.Font = Enum.Font.Gotham
+						TextLabel_2.Text = " "
 						TextLabel_2.TextColor3 = Color3.fromRGB(125, 125, 125)
-						TextLabel_2.TextSize = 14.000
+						TextLabel_2.TextSize = 12.000
 						TextLabel_2.TextStrokeTransparency = 0.000
 						
 						TextLabel_3.Parent = Frame_2
 						TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 						TextLabel_3.BackgroundTransparency = 1.000
-						TextLabel_3.Position = UDim2.new(0.0574412532, 0, -0.166666672, 0)
-						TextLabel_3.Size = UDim2.new(0, 10, 0, 21)
-						TextLabel_3.Font = Enum.Font.SourceSans
+						TextLabel_3.Position = UDim2.new(0.267264487, 0, -0.166666672, 0)
+						TextLabel_3.Size = UDim2.new(0, 18, 0, 21)
+						TextLabel_3.Font = Enum.Font.Gotham
 						TextLabel_3.Text = "|"
 						TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
-						TextLabel_3.TextSize = 14.000
+						TextLabel_3.TextSize = 12.000
 						TextLabel_3.TextStrokeTransparency = 0.000
 						
 						TextLabel_4.Parent = Frame_2
 						TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 						TextLabel_4.BackgroundTransparency = 1.000
-						TextLabel_4.Position = UDim2.new(0.1255509151, 0, -0.111111112, 0)
-						TextLabel_4.Size = UDim2.new(0, 30, 0, 20)
-						TextLabel_4.Font = Enum.Font.SourceSans
-						TextLabel_4.Text = "Bloxware"
+						TextLabel_4.Position = UDim2.new(0.310889742, 0, -0.111111112, 0)
+						TextLabel_4.Size = UDim2.new(0, 44, 0, 20)
+						TextLabel_4.Font = Enum.Font.Gotham
+						TextLabel_4.Text = "260 фпс"
 						TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
-						TextLabel_4.TextSize = 14.000
+						TextLabel_4.TextSize = 12.000
 						TextLabel_4.TextStrokeTransparency = 0.000
 						
 						TextLabel_5.Parent = Frame_2
 						TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 						TextLabel_5.BackgroundTransparency = 1.000
-						TextLabel_5.Position = UDim2.new(0.208495268, 0, -0.111111112, 0)
-						TextLabel_5.Size = UDim2.new(0, 40, 0, 20)
-						TextLabel_5.Font = Enum.Font.SourceSans
-						TextLabel_5.Text = ".xyz"
-						TextLabel_5.TextColor3 = Color3.fromRGB(125, 125, 125)
-						TextLabel_5.TextSize = 14.000
+						TextLabel_5.Position = UDim2.new(0.450387619, 0, -0.166666672, 0)
+						TextLabel_5.Size = UDim2.new(0, 9, 0, 21)
+						TextLabel_5.Font = Enum.Font.Gotham
+						TextLabel_5.Text = "|"
+						TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+						TextLabel_5.TextSize = 12.000
 						TextLabel_5.TextStrokeTransparency = 0.000
 						
 						TextLabel_6.Parent = Frame_2
 						TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 						TextLabel_6.BackgroundTransparency = 1.000
-						TextLabel_6.Position = UDim2.new(0.297264487, 0, -0.166666672, 0)
-						TextLabel_6.Size = UDim2.new(0, 18, 0, 21)
-						TextLabel_6.Font = Enum.Font.SourceSans
-						TextLabel_6.Text = "|"
+						TextLabel_6.Position = UDim2.new(0.490040214, 0, -0.111111112, 0)
+						TextLabel_6.Size = UDim2.new(0, 44, 0, 20)
+						TextLabel_6.Font = Enum.Font.Gotham
+						TextLabel_6.Text = "00:00:00"
 						TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
-						TextLabel_6.TextSize = 14.000
+						TextLabel_6.TextSize = 12.000
 						TextLabel_6.TextStrokeTransparency = 0.000
 						
 						TextLabel_7.Parent = Frame_2
 						TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 						TextLabel_7.BackgroundTransparency = 1.000
-						TextLabel_7.Position = UDim2.new(0.350889742, 0, -0.111111112, 0)
-						TextLabel_7.Size = UDim2.new(0, 44, 0, 20)
-						TextLabel_7.Font = Enum.Font.SourceSans
-						TextLabel_7.Text = "260 fps"
+						TextLabel_7.Position = UDim2.new(0.632284149, 0, -0.166666672, 0)
+						TextLabel_7.Size = UDim2.new(0, 9, 0, 21)
+						TextLabel_7.Font = Enum.Font.Gotham
+						TextLabel_7.Text = "|"
 						TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
-						TextLabel_7.TextSize = 14.000
+						TextLabel_7.TextSize = 12.000
 						TextLabel_7.TextStrokeTransparency = 0.000
 						
 						TextLabel_8.Parent = Frame_2
 						TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 						TextLabel_8.BackgroundTransparency = 1.000
-						TextLabel_8.Position = UDim2.new(0.490387619, 0, -0.166666672, 0)
-						TextLabel_8.Size = UDim2.new(0, 9, 0, 21)
-						TextLabel_8.Font = Enum.Font.SourceSans
-						TextLabel_8.Text = "|"
+						TextLabel_8.Position = UDim2.new(0.673036804, 0, -0.111111112, 0)
+						TextLabel_8.Size = UDim2.new(0, 96, 0, 20)
+						TextLabel_8.Font = Enum.Font.Gotham
+						TextLabel_8.Text = "December 21 2021"
 						TextLabel_8.TextColor3 = Color3.fromRGB(255, 255, 255)
-						TextLabel_8.TextSize = 14.000
+						TextLabel_8.TextSize = 12.000
 						TextLabel_8.TextStrokeTransparency = 0.000
-						
-						TextLabel_9.Parent = Frame_2
-						TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-						TextLabel_9.BackgroundTransparency = 1.000
-						TextLabel_9.Position = UDim2.new(0.520040214, 0, -0.111111112, 0)
-						TextLabel_9.Size = UDim2.new(0, 44, 0, 20)
-						TextLabel_9.Font = Enum.Font.SourceSans
-						TextLabel_9.Text = "00:00:00"
-						TextLabel_9.TextColor3 = Color3.fromRGB(255, 255, 255)
-						TextLabel_9.TextSize = 14.000
-						TextLabel_9.TextStrokeTransparency = 0.000
-						
-						TextLabel_10.Parent = Frame_2
-						TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-						TextLabel_10.BackgroundTransparency = 1.000
-						TextLabel_10.Position = UDim2.new(0.653384149, 0, -0.166666672, 0)
-						TextLabel_10.Size = UDim2.new(0, 9, 0, 21)
-						TextLabel_10.Font = Enum.Font.SourceSans
-						TextLabel_10.Text = "|"
-						TextLabel_10.TextColor3 = Color3.fromRGB(255, 255, 255)
-						TextLabel_10.TextSize = 14.000
-						TextLabel_10.TextStrokeTransparency = 0.000
-						
-						TextLabel_11.Parent = Frame_2
-						TextLabel_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-						TextLabel_11.BackgroundTransparency = 1.000
-						TextLabel_11.Position = UDim2.new(0.683036804, 0, -0.111111112, 0)
-						TextLabel_11.Size = UDim2.new(0, 96, 0, 20)
-						TextLabel_11.Font = Enum.Font.SourceSans
-						TextLabel_11.Text = "December 21 2021"
-						TextLabel_11.TextColor3 = Color3.fromRGB(255, 255, 255)
-						TextLabel_11.TextSize = 14.000
-						TextLabel_11.TextStrokeTransparency = 0.000
+
+        				UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(41, 0, 65)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(25, 0, 51))}
+                        UIGradient.Rotation = 90
+                        UIGradient.Parent = ScreenGui -- purple (41, 0, 65)
 						
 						-- Scripts:
 						
-						local function NCVKNUP_fake_script() -- TextLabel_7.LocalScript 
-							local script = Instance.new('LocalScript', TextLabel_7)
+						local function NCVKNUP_fake_script() -- TextLabel_4.LocalScript 
+							local script = Instance.new('LocalScript', TextLabel_4)
 						
 							local RunService = game:GetService("RunService")
 							local FpsLabel = script.Parent
@@ -6028,15 +6070,15 @@ client:Element("Toggle", "watermark (doesn't show in the menu)", {}, function(tb
 								end
 							
 								FrameUpdateTable[1] = LastIteration
-								FpsLabel.Text = tostring(math.floor(TimeFunction() - Start >= 1 and #FrameUpdateTable or #FrameUpdateTable / (TimeFunction() - Start))) .. " fps"
+								FpsLabel.Text = tostring(math.floor(TimeFunction() - Start >= 1 and #FrameUpdateTable or #FrameUpdateTable / (TimeFunction() - Start))) .. " фпс"
 							end
 							
 							Start = TimeFunction()
 							RunService.Heartbeat:Connect(HeartbeatUpdate)
 						end
 						coroutine.wrap(NCVKNUP_fake_script)()
-						local function KKHNQJK_fake_script() -- TextLabel_9.LocalScript 
-							local script = Instance.new('LocalScript', TextLabel_9)
+						local function KKHNQJK_fake_script()
+							local script = Instance.new('LocalScript', TextLabel_6)
 						
 							local mo = "A.M."
 							local mont = nil
@@ -6046,7 +6088,7 @@ client:Element("Toggle", "watermark (doesn't show in the menu)", {}, function(tb
 								local m = math.floor(l/60-h*60)
 								local s = math.floor(math.fmod(l,60))
 								local y = math.floor(1970+tick()/31579200)
-								local mon = {{"January",31,31},{"February",59,28},{"March",90,31},{"April",120,30},{"May",151,31},{"June",181,30},{"July",212,31},{"August",243,31},{"September",273,30},{"October",304,31},{"November",334,30},{"December",365,31}}
+								local mon = {{"Январь",31,31},{"Февраль",59,28},{"Март",90,31},{"Апрель",120,30},{"Май",151,31},{"Июнь",181,30},{"Июль",212,31},{"Авгут",243,31},{"Сентябрь",273,30},{"Откябрь",304,31},{"Ноябрь",334,30},{"Декабрь",365,31}}
 								if y%4 == 0 then
 									mon[2][3] = 29
 									for i,v in pairs(mon) do
@@ -6080,8 +6122,8 @@ client:Element("Toggle", "watermark (doesn't show in the menu)", {}, function(tb
 							end
 						end
 						coroutine.wrap(KKHNQJK_fake_script)()
-						local function ZAGYNQ_fake_script() -- TextLabel_11.LocalScript 
-							local script = Instance.new('LocalScript', TextLabel_11)
+						local function ZAGYNQ_fake_script() -- TextLabel_8.LocalScript 
+							local script = Instance.new('LocalScript', TextLabel_8)
 						
 							local mo = "A.M."
 							local mont = nil
@@ -6091,7 +6133,7 @@ client:Element("Toggle", "watermark (doesn't show in the menu)", {}, function(tb
 								local m = math.floor(l/60-h*60)
 								local s = math.floor(math.fmod(l,60))
 								local y = math.floor(1970+tick()/31579200)
-								local mon = {{"January",31,31},{"February",59,28},{"March",90,31},{"April",120,30},{"May",151,31},{"June",181,30},{"July",212,31},{"August",243,31},{"September",273,30},{"October",304,31},{"November",334,30},{"December",365,31}}
+								local mon = {{"Январь",31,31},{"Февраль",59,28},{"Март",90,31},{"Апрель",120,30},{"Май",151,31},{"Июнь",181,30},{"Июль",212,31},{"Авгут",243,31},{"Сентябрь",273,30},{"Откябрь",304,31},{"Ноябрь",334,30},{"Декабрь",365,31}}
 								if y%4 == 0 then
 									mon[2][3] = 29
 									for i,v in pairs(mon) do
@@ -6137,7 +6179,8 @@ client:Element("Toggle", "watermark (doesn't show in the menu)", {}, function(tb
 						game.CoreGui.Lucid:Destroy()
 					end
                 end)
-client:Element("Toggle", "spectators list", nil, function(tbl)      
+
+client:Element("Toggle", "spectators list", nil, function(tbl)     
 	if tbl.Toggle then      
 		local SpectatorsList = Instance.new("ScreenGui")
         local Spectators = Instance.new("Frame")
@@ -6148,7 +6191,6 @@ client:Element("Toggle", "spectators list", nil, function(tbl)
         local Background = Instance.new("Frame")
         local UIGradient = Instance.new("UIGradient")
         local Color = Instance.new("Frame")
-        local UIGradient_2 = Instance.new("UIGradient")
 
         SpectatorsList.Parent = game.CoreGui
         SpectatorsList.Name = "SpectatorsList"
@@ -6178,7 +6220,7 @@ client:Element("Toggle", "spectators list", nil, function(tbl)
         Text.BackgroundTransparency = 1.000
         Text.Size = UDim2.new(1, 0, 1, 0)
         Text.ZIndex = 4
-        Text.Font = Enum.Font.Code
+        Text.Font = Enum.Font.Gotham
         Text.Text = "Spectators"
         Text.TextColor3 = Color3.fromRGB(65025, 65025, 65025)
         Text.TextSize = 14.000
@@ -6190,7 +6232,7 @@ client:Element("Toggle", "spectators list", nil, function(tbl)
         Players.Position = UDim2.new(0.0196080022, 0, 1.14285719, 0)
         Players.Size = UDim2.new(0.980391979, 0, 1.14285719, 0)
         Players.ZIndex = 4
-        Players.Font = Enum.Font.Code
+        Players.Font = Enum.Font.Gotham
         Players.Text = "loading..."
         Players.TextColor3 = Color3.fromRGB(65025, 65025, 65025)
         Players.TextSize = 14.000
@@ -6199,11 +6241,11 @@ client:Element("Toggle", "spectators list", nil, function(tbl)
 
         Background.Name = "Background"
         Background.Parent = Spectators
-        Background.BackgroundColor3 = Color3.fromRGB(23, 23, 23)
-        Background.BorderColor3 = Color3.fromRGB(20, 20, 20)
+        Background.BackgroundColor3 = Color3.fromRGB(41, 0, 65)
+        Background.BorderColor3 = Color3.fromRGB(0, 0, 0)
         Background.Size = UDim2.new(1, 0, 1, 0)
 
-        UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(90, 90, 90))}
+        UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(41, 0, 65)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(25, 0, 51))}
         UIGradient.Rotation = 90
         UIGradient.Parent = Background
 
@@ -6213,10 +6255,6 @@ client:Element("Toggle", "spectators list", nil, function(tbl)
         Color.BorderSizePixel = 0
         Color.Size = UDim2.new(1, 0, 0, 2)
         Color.ZIndex = 2
-
-        UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(60, 60, 60))}
-        UIGradient_2.Rotation = 90
-        UIGradient_2.Parent = Color
 
         function GetSpectators()
             local CurrentSpectators = ""
@@ -6257,9 +6295,6 @@ client:Element("Toggle", "spectators list", nil, function(tbl)
         game.CoreGui.SpectatorsList:Destroy()
    end     
 end)
-client:Element("Toggle", "keybind list", nil, function(tbl)
-library:SetKeybindVisible(tbl.Toggle)
-end)
 client:Element("Toggle", "infinite crouch")
 client:Element("Jumbobox", "damage bypass", {options = {"fire", "fall"}})
 client:Element("Jumbobox", "gun modifiers", {options = {"recoil", "spread", "reload", "equip", "ammo", "automatic", "penetration", "firerate"}})
@@ -6278,8 +6313,9 @@ workspace:FindFirstChild("Map"):FindFirstChild("KillersClone").Name = "Killers"
 end
 end
 end)
+
 client:Element("ToggleColor", "hitmarker", {default = {Color = COL3RGB(255,255,255)}})
-client:Element("Toggle", "buy any grenade")
+client:Element("Toggle", "Buy any grenade")
 client:Element("Toggle", "chat alive")
 client:Element("Jumbobox", "shop", {options = {"inf time", "anywhere"}})
 client:Element("Toggle", "anti spectate")
@@ -6330,7 +6366,7 @@ client:Element("Button", "clantag", nil, function()
 	 end
 	 
 	 local CurrentLetter = 0 
-	 local Clantag = "bloxware.xyz+"
+	 local Clantag = "Kabanware"
 	 
 	 while wait(0.3) do 
 		Services.LocalPlayer.OsPlatform = "|"..Clantag:sub(0, CurrentLetter).." " 
@@ -6341,20 +6377,13 @@ client:Element("Button", "clantag", nil, function()
 		CurrentLetter = CurrentLetter + 1 
 	 end
 end)
-client:Element("Button", "rejoin", nil, function()
+client:Element("Button", "Rejoin", nil, function()
     local ts = game:GetService("TeleportService")
     local p = game:GetService("Players").LocalPlayer
     ts:Teleport(game.PlaceId, p)
 end)
-client:Element("Button", "FPS Booster", {}, function()
-    for _, object in ipairs(workspace:GetDescendants()) do
-      if object:IsA("BasePart") then
-        object.Material = Enum.Material.SmoothPlastic
-      end
-    end
-end)
 client:Element("Button", "Better GUI", {}, function()
-local words = {"What the dog doin?","Bro this retard gay","I raped your dog","Omnikonna is a nn","I love semi","Bloxsense on top let's go!","A1thernex secretly loves boys","Ion is my boyfriend","Eska is the best hvher"} 
+local words = {"Кабанваре не существует","СВЕЖИЙ КАБАНЧИК","kabanware > hexagon","зарезал кабана - изи каткаа","Удали читы","Я не умею делать скрипты","СИСЬКИ ЖОПА ЧЛЕН","0 8 счет еее","Сука, хули я миссаю?"} 
 
 	game:GetService("Players").LocalPlayer.PlayerGui.GUI.Cash.BackgroundTransparency = 0.800
 
@@ -6410,13 +6439,9 @@ local words = {"What the dog doin?","Bro this retard gay","I raped your dog","Om
 
 	game:GetService("Players").LocalPlayer.PlayerGui.GUI.CTWin.Color.Transparency = 0.8
 
-	game:GetService("Players").LocalPlayer.PlayerGui.GUI.CTWin.Info.Transparency = 0.8
-
 	game:GetService("Players").LocalPlayer.PlayerGui.GUI.TWin.Transparency = 0.8
 
 	game:GetService("Players").LocalPlayer.PlayerGui.GUI.TWin.Color.Transparency = 0.8
-
-	game:GetService("Players").LocalPlayer.PlayerGui.GUI.TWin.Info.Transparency = 0.8
 
 	game:GetService("Players").LocalPlayer.PlayerGui.GUI.Cash.BuyZone.ImageTransparency = 1
 
@@ -6472,7 +6497,6 @@ local words = {"What the dog doin?","Bro this retard gay","I raped your dog","Om
 	game:GetService("Players").LocalPlayer.PlayerGui.GUI.Defusal.Defusing.Font = Enum.Font.Gotham
 	game:GetService("Players").LocalPlayer.PlayerGui.GUI.Defusal.Time.Font = Enum.Font.Gotham
 
-	game:GetService("Players").LocalPlayer.PlayerGui.GUI.UpperInfo.Transparency = 1
 	game:GetService("Players").LocalPlayer.PlayerGui.GUI.UpperInfo.Timer.BackgroundTransparency = 0.800
 	game:GetService("Players").LocalPlayer.PlayerGui.GUI.UpperInfo.CTScore.BackgroundTransparency = 0.800
 	game:GetService("Players").LocalPlayer.PlayerGui.GUI.UpperInfo.CTScore.Size = UDim2.new(0, 58, 0, 39)
@@ -6481,11 +6505,13 @@ local words = {"What the dog doin?","Bro this retard gay","I raped your dog","Om
 	game:GetService("Players").LocalPlayer.PlayerGui.GUI.UpperInfo.Timer.Size = UDim2.new(1, 0, 0, 36)
 	game:GetService("Players").LocalPlayer.PlayerGui.GUI.UpperInfo.Timer.Bomb.Animate:Destroy()
 	game:GetService("Players").LocalPlayer.PlayerGui.GUI.UpperInfo.Scaler:Destroy()
-	end)   
-client:Element("Toggle", "my eyes")
+    game:GetService("Players").LocalPlayer.PlayerGui.GUI.SuitZoom:Destroy()
+    game:GetService("Players").LocalPlayer.PlayerGui.GUI.SuitZoom.Transparency = 1
+    game:GetService("Players").LocalPlayer.PlayerGui.GUI.SuitZoom.Visible = false
+    end)
 local oldgrenadeallowed = Client.grenadeallowed
 Client.grenadeallowed = function(...)
-if values.misc.client["buy any grenade"].Toggle then
+if values.misc.client["Buy any grenade"].Toggle then
 return true
 end
 
@@ -6640,7 +6666,7 @@ movement:Element("Toggle", "keystrokes", {}, function(tbl)
         W.BackgroundTransparency = 1.000
         W.Position = UDim2.new(0.287764132, 0, -0.0102292299, 0)
         W.Size = UDim2.new(0, 29, 0, 28)
-        W.Font = Enum.Font.Code
+        W.Font = Enum.Font.Gotham
         W.Text = "_"
         W.TextColor3 = Color3.fromRGB(255, 255, 255)
         W.TextSize = 14.000
@@ -6652,7 +6678,7 @@ movement:Element("Toggle", "keystrokes", {}, function(tbl)
         S.BackgroundTransparency = 1.000
         S.Position = UDim2.new(0.287764132, 0, 0.35915342, 0)
         S.Size = UDim2.new(0, 29, 0, 28)
-        S.Font = Enum.Font.Code
+        S.Font = Enum.Font.Gotham
         S.Text = "_"
         S.TextColor3 = Color3.fromRGB(255, 255, 255)
         S.TextSize = 14.000
@@ -6664,7 +6690,7 @@ movement:Element("Toggle", "keystrokes", {}, function(tbl)
         A.BackgroundTransparency = 1.000
         A.Position = UDim2.new(-0.0950409099, 0, 0.35915345, 0)
         A.Size = UDim2.new(0, 29, 0, 28)
-        A.Font = Enum.Font.Code
+        A.Font = Enum.Font.Gotham
         A.Text = "_"
         A.TextColor3 = Color3.fromRGB(255, 255, 255)
         A.TextSize = 14.000
@@ -6676,7 +6702,7 @@ movement:Element("Toggle", "keystrokes", {}, function(tbl)
         D.BackgroundTransparency = 1.000
         D.Position = UDim2.new(0.684458077, 0, 0.35915342, 0)
         D.Size = UDim2.new(0, 29, 0, 28)
-        D.Font = Enum.Font.Code
+        D.Font = Enum.Font.Gotham
         D.Text = "_"
         D.TextColor3 = Color3.fromRGB(255, 255, 255)
         D.TextSize = 14.000
@@ -6688,7 +6714,7 @@ movement:Element("Toggle", "keystrokes", {}, function(tbl)
         E.BackgroundTransparency = 1.000
         E.Position = UDim2.new(-0.0950409099, 0, -0.0102293491, 0)
         E.Size = UDim2.new(0, 29, 0, 28)
-        E.Font = Enum.Font.Code
+        E.Font = Enum.Font.Gotham
         E.Text = "_"
         E.TextColor3 = Color3.fromRGB(255, 255, 255)
         E.TextSize = 14.000
@@ -6700,7 +6726,7 @@ movement:Element("Toggle", "keystrokes", {}, function(tbl)
         R.BackgroundTransparency = 1.000
         R.Position = UDim2.new(0.683231115, 0, -0.0102292895, 0)
         R.Size = UDim2.new(0, 29, 0, 28)
-        R.Font = Enum.Font.Code
+        R.Font = Enum.Font.Gotham
         R.Text = "_"
         R.TextColor3 = Color3.fromRGB(255, 255, 255)
         R.TextSize = 14.000
@@ -6783,7 +6809,7 @@ movement:Element("ToggleKeybind", "edge jump")
 movement:Element("ToggleKeybind", "edge bug")
 
 local troll = misc:Sector("trolling", "Right")
-troll:Element("Button", "Become weird", nil, function()
+troll:Element("Button", "Where is my mind", nil, function()
 LocalPlayer.Character.UpperTorso.Waist:Destroy() 
 end)
 troll:Element("Button", "Respawn", nil, function()
@@ -6794,7 +6820,7 @@ local chat = misc:Sector("chat", "Left")
 chat:Element("Toggle", "chat spam", nil, function(tbl)
 if tbl.Toggle then
 while values.misc.chat["chat spam"].Toggle do
-game:GetService("ReplicatedStorage").Events.PlayerChatted:FireServer(values.misc.chat.type.Dropdown == "salad.shitk" and "bloxware uid???" or "0-8 kd be like:", false, "Innocent", false, true)
+game:GetService("ReplicatedStorage").Events.PlayerChatted:FireServer(values.misc.chat.type.Dropdown == "KABANWARE BEST HACKZZ" and "KABANWARE BEST HACKZZ" or "KABANWARE BEST HACKZZ", false, "Innocent", false, true)
 wait(values.misc.chat["speed (ms)"].Slider/1000)
 
 end
@@ -6802,8 +6828,15 @@ end
 end)
 world:Element('Toggle', 'Killsoundtoggle')
 world:Element('TextBox', 'Killsound', {placeholder = "ID HERE"})
-chat:Element("Dropdown", "type", {options = {"salad.shitk", "bs.pubwinning"}})
-chat:Element("Slider", "speed (ms)", {min = 15, max = 300, default = 50})
+world:Element("Button", "mat_wireframe 1", {}, function()
+    for _, object in ipairs(workspace:GetDescendants()) do
+      if object:IsA("BasePart") then
+        object.Material = Enum.Material.ForceField
+      end
+    end
+end)
+chat:Element("Dropdown", "type", {options = {"KABANWARE BEST HACKZZ"}})
+chat:Element("Slider", "speed (ms)", {min = 1, max = 300, default = 50})
 chat:Element("Toggle", "randomized kill say")
 chat:Element("Toggle", "kill say")
 chat:Element("TextBox", "message", {placeholder = "message"})
@@ -6855,7 +6888,7 @@ local Notification = Instance.new("ScreenGui") do
     SampleLabel.BorderSizePixel = 0
     SampleLabel.Position = UDim2.new(1.97835922, 0, 0, 0)
     SampleLabel.Size = UDim2.new(0, 0, 0, 24)
-    SampleLabel.Font = Enum.Font.Code
+    SampleLabel.Font = Enum.Font.Gotham
     SampleLabel.Text = "TEST"
     SampleLabel.TextTruncate = Enum.TextTruncate.AtEnd
     SampleLabel.AutomaticSize = Enum.AutomaticSize.XY
@@ -6865,7 +6898,7 @@ local Notification = Instance.new("ScreenGui") do
     SampleLabel.TextTransparency = 1.000
     SampleLabel.TextXAlignment = Enum.TextXAlignment.Left
     
-    UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(49, 49, 49)), ColorSequenceKeypoint.new(0.41, Color3.fromRGB(25, 25, 25)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(25, 25, 25))}
+    UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(41, 0, 65)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(25, 0, 51))}
     UIGradient.Rotation = 90
     UIGradient.Parent = SampleFrame
     end
@@ -6904,7 +6937,7 @@ local function CreateHitElement(text,col,time, size, size2, size3, size4)
     end)
 end
 
-CreateHitElement("loading bloxware+...",Color3.new(1,1,1), 5, 0, 270,  0, 22)
+CreateHitElement("ЗАГРУЖАЕМ КАБАНА НАХУЙ",Color3.new(1,1,1), 5, 0, 270,  0, 22)
 
 local grenades = misc:Sector("grenades", "Right")
 grenades:Element("ToggleKeybind", "spam grenades")
@@ -6936,9 +6969,6 @@ end
 end)
 end)
 grenades:Element("ToggleKeybind", "ping exploit", {Type = "Toggle", Key = "T"}, function(tbl)
-if tbl.Toggle then
-game:GetService("ReplicatedStorage").Events.PlayerChatted:FireServer("good night server", false, "Innocent", false, true)
-end
 spawn(function()
 while values.misc.grenades["ping exploit"].Toggle and values.misc.grenades["ping exploit"].Active do
 pcall(function()
@@ -7417,7 +7447,7 @@ if values.rage.exploits["kill all"].Toggle and values.rage.exploits["kill all"].
 								local oh11 = Vector3.new()
 								local oh12 = 1
 								local oh13 = Vector3.new()
-								game:GetService("ReplicatedStorage").Events.HitPart:FireServer(oh1, oh2, oh3, oh4, oh5, oh6, oh7, oh8, oh9, oh10, oh11, oh12, oh13)
+								game:GetService("ReplicatedStorage").Events.Hit:FireServer(oh1, oh2, oh3, oh4, oh5, oh6, oh7, oh8, oh9, oh10, oh11, oh12, oh13)
 end
 end
 end
@@ -7430,7 +7460,7 @@ if values.rage.exploits["knife kill all"].Toggle and values.rage.exploits["knife
                     local b4 = {
                         [1] = b3.Character.UpperTorso,
                         [2] = b3.Character.UpperTorso.Position,
-                        [3] = "T Knife",
+                        [3] = "Crowbar",
                         [4] = 4096,
                         [5] = LocalPlayer.Character.Gun,
                         [8] = 1,
@@ -7442,10 +7472,10 @@ if values.rage.exploits["knife kill all"].Toggle and values.rage.exploits["knife
                     }
                     if values.rage.exploits["hits amount"].Slider > 1 then
                         for i=1, values.rage.exploits["hits amount"].Slider do
-                            game.ReplicatedStorage.Events.HitPart:FireServer(unpack(b4))
+                            game.ReplicatedStorage.Events.Hit:FireServer(unpack(b4))
                         end
                     else
-                        game.ReplicatedStorage.Events.HitPart:FireServer(unpack(b4))
+                        game.ReplicatedStorage.Events.Hit:FireServer(unpack(b4))
                     end
                 else killallisworking = false end
             end
@@ -8315,6 +8345,7 @@ else
 if values.visuals.self["viewmodel changer"].Toggle then
 args[1] = args[1] * ViewmodelOffset
 end
+
 if values.visuals.self["visualize silent angle"].Toggle and RageTarget then -- is it enabled and are we aimbotting at someone?
 args[1] = CFrame.lookAt(args[1].p, RageTarget.Position)-- if yes, apply the cframe.lookat on top of the viewmodel offset
 end
@@ -8747,94 +8778,47 @@ sound:Destroy()
 
 end)
 local killsaytable = {
-	"bloxware.xyz killed you",
-	"bloxware.xyz",
-	"Держи зонтик ☂, тебя oбoссaли",
-	"ツ",
-	"CRY HERE ---> |_| <--- Africans need water",
-	"·٠●•۩۞۩ОтДыХаЙ (ٿ) НуБяРа۩۞۩•●٠·",
-	"Держи ✈ и лети нахуй !",
-	"╭∩╮( ⚆ ʖ ⚆)╭∩╮ ДоПрыГался(ت)ДрУжоЧеК",
-	"bloxware'd",
-	"Hexagon is the best!",
-	"庆崇你好我讨厌你愚蠢的母愚蠢的母庆崇",
-	"rapid + pen + noclip + no head + godmode",
-	"Over 87% of Americans have access to curbside or drop-off paper recycling programs.",
-	"In 2010, paper recycling had increased over 89% since 1990.",
-	"In 2017, 35,370 tons of plastic was generated, 2,960 tons was recycled, and 26,820 was put in a landfill.",
-	"1'ed 2'ed 3'ed",
-	"Bats are the only mammal that can actually fly.",
-	"Mosquitoes are the deadliest animal in the world: They kill more people than any other creature, due to the diseases they carry.",
-	"Octopuses have three hearts.",
+    "🤫1🤫1🤫",
+	"офни пен сын шлюхи",
+	"ШКИБИДИ ДОП ДОП ДОП ЕС ЕС 🗣🗣🗣",
+	"🦍 1 🦍",
+	"АХАХХА Я СЕЙЧАС ВСЕХ УБЬЮ ААААААААААААААА",
+	"kabanware > hexagon",
+	"💞 я тебя выебал 💞",
+	"🚮🚮🚮",
+	"НОУ БЕКТРЕК??????",
+	"ААААААААААААААААА Я ТЕБЯ УБИЛ",
+	"ебать мне повезло 😈😈😈",
+	"🤞✌️🤟🤘👌🤟☝️✋🖐🤙🤞✌️🤟🤘👌🤟☝️✋🖐🤙",
+	"🏌️‍♀️ 🤸‍♀️ 1 0",
+	"♿️♿️♿",
+	"⚰️ <----- это ты",
+	"9/11 🛬 🏢🏢",
+	"✅✅ ЛЕТО ЧЕРЕЗ ТРИ ДНЯ!!! ✅✅",
+	"Гетните норм скрипт, не будьте как я с говном во рту 🛏",
+	"УЛЬТРАКИЛЛ ГОВНО 💢💢💢",
 	"synapse x🤮🤢 jjsploit🔥💖",
-	"У человека меньше мyскyлов, чем y гyсеницы.",
-	"гетни bloxware.xyz чучело",
-	"missed shot due to umm i forgor",
-	"один сит нн дог",
-	"Япония — последняя страна в мире, формально сохранившая титул Империи.",
-	"Бильярд, так же как и шахматы, имеет очень древнее происхождение, а его родиной является Азия.",
-	"В Антарктиде банкоматов в 2 раза больше, чем постоянных жителей.",
-	"坐下，一直保持着安静的状态。 谁把他拥有的东西给了他，所以他不那么爱欠债务，却拒  参加锻炼，这让他爱得更少了",
-	"[ magmaa.digital ] shot missed due to ? ( hitchance: 100 | damage: 40 | safepoint: true | head safepoint: false | target: left leg ).",
-	", yīzhí bǎochízhe ānjìng de zhuàngtài. Shéi bǎ tā yǒngyǒu de dōngxī gěile tā, suǒyǐ tā bù nàme ài qiàn zhàiwù, què jùjué cānjiā duànliàn, z",
-	"[onetap] [39] Missed Skully's head due to onetap (hitchance: 100| safety= 0) (B) (7:1) (delay: 14 | tickrate: 64)",
-	"[weave] Missed shot due to animation desync",
-	"Fired at [salad] | [head] bt [0] dmg [219] hc [60] <<Missed shot due to resolver",
-	"[ pandora ] fired shot at ♔ Š!čĶ BØ | damage: [ 79 : 38 ] | hc: 100 | vel: [ 202.907 ] | hp: 100 | hg: [ stomach : stomach ] | bt: 0 | choke: 1 | roll: 50.000000 | ",
-	"[neverlose.cc] Missed shot due to death",
-	"[gamesense] Missed shot due to ?",
-	"when played aimlab for 1 minute:",
-	"持有毁灭性的神经重景气游行脸红青铜色类别创意案",
-	"诶比西迪伊艾弗吉艾尺艾杰开艾勒艾马艾娜哦屁吉吾",
-	"Гречка очищает желудок от жвачек.",
-	"Лечебные свойства зелёного чая — это миф",
-	"HAPPY!!!! HAPPY!!!! HAPPY!!!! HAPPY ✈️✈️ ✈️✈️ ✈️✈️ 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🗼🗼 9/11  ✈️✈️ ✈️✈️ ✈️✈️ 🔥 🔥 🔥 🔥 🔥 🔥 🔥 DAY!!!!!! 🗼🗼✈️🔥🤗",
-	"getgenv().RageBot = true (bloxsense ragebot leak)",
-	"👊👊👊👊👊👊",
-	"多黨制 Multi-party system 台灣 臺灣 Taiwan Formosa 中華民國 Republic of China 西藏 土伯特 唐古特",
-	"🧻🚎🥐😳🪐🧙🧆🦍🪕🚦🧷🤙😈🙄🧴🪓🦉🥠🤒🧶🚺",
-	"resolved by nn.tech",
-	"anotherware.end HARAM",
-	"She/Her 🏳️‍⚧️ LGBTQ+ Ally 🌈",
-	"ragebot ERROR",
-	"Я АДМИН Я ТЕБЯ ЗАБАНЮ!11",
-	"完成与草屋两个苏巴完成与草屋两个苏巴完成与草屋",
-	"www.youtube.com/watch?v=dQw4w9WgXcQ",
-	"зачем из окна выбросился?",
-	"game:Shutdown()",
-	"new da hood, untitled hood, hood modded aimlock pastebin no linkvertise 2022",
-	"скачал хеппимод и радуется",
-	"tapped by bloxware.xyz",
-	"pls give me alsike",
-	"pls give me hexadecimal",
-	"-1 social credit",
-	"pls give me bloxsense.pub",
-	"pls give me other cool script",
-	"Одна сигарета отнимает 5 минут жизни!",
-	"'Dreamt' is the only word in the English language that ends with 'mt'.",
-	"A snail can sleep for three years.",
-	"Hummingbirds are the only animals that can fly backward.",
-	"A dragonfly has a lifespan of only one day.",
-	"a1ternex was here",
-	"owl hub'ed dark hub'ed fps gui'ed",
-	"brooo hacker lol go touch woman!11",
-	"LOL 13 Y.O. KID WITH FREE HACKS!11",
-	"m+9 kick",
-	"NEW AA BY BLOXWARE",
-	"skid + paster + rip + bozo + L + 1 + im forgor",
-	"об кафель голову разбил?",
-	"мама меня фура убила",
-	"Самый старый вулкан – Этна, его возраст более 350 000 лет.",
-	"Когда вы краснеете, ваш желудок тоже краснеет.",
-	"Во рту человека около 40 000 бактерий.",
-	"音频少年公民记忆欲求无尽 heywe 僵尸强迫身体哑集中排水",
-	"У свиньи оргазм длится 30 минут!",
-	"Термин «любовь» произошёл от «lubhyati» (санскрит) и означает «желание».",
-	"Наполеон Бонапарт был вовсе не коротышкой — его рост был выше среднего в то время и составлял 169 сантиметров.",
-	"35 см - таким был рост самого маленького пони. И звали его соответственно - тыквочка.",
-	"rawrie what is that? not bloxware.xyz (",
-	"Петух не может петь, если не вытянет шею.",
-	"По суше бегемот может бежать быстрее человека."
+	"Я ЛЕГИТ ЧЕСТНОЕ СЛОВО НАХУЙ",
+	"🎰🎰🎰🎰🎰🎰🎰",
+	"💦💦💦💦💦💦💦",
+	"🤔🤭🤫😐😑😬😤😩😢",
+	"ЕБАТЬ, Я НЕ МИССАНУЛ ПО ТЕБЕ",
+	"ты заебал попадать, купи missware.gay",
+	"🤬🤯 HEXAGON ДЛЯ ПИДОРОВ 🤬🤯",
+	"СОСАААААААААААААААААТЬ",
+	"авыщзавыщзалвыхсалмвыжа",
+	"ЫЫЫЫЫЫЫЫ АСУЖДАЮ ЫЫЫЫ",
+	"🔥🔥🔥 pepsi.club самый крутой чит 🔥🔥🔥",
+	"BUY FPS GUI 3.0 🔥🔥🔥🔥🔥🔥",
+	"Я СЫН ТАЙСКОЙ ШЛЮХИ 🐽🐽🐽",
+	"померил твой член, а там 📏",
+    "Сможешь сломать свой страх и не кто не сможет сломать тебя.🤙☝️",
+    "Живи, люби, кради, гуляй, купи весь мир, потом отдай! Всегда лишь помни вещь одну не забывай свою братву!🤙☝️",
+    "Лучше быть последним — первым, чем первым — последним. 🤙☝️",
+    "Живу бедно… сыр с плесенью, вино старое, машина без крыши и телефон без кнопок. 🤙☝️",
+    "Настоящий мужчина, как волк, либо один, либо не один навсегда. А убегать я не умею. 🤙☝️",
+    "Если что не понял — читай по губам: «фак мус*рам, свободу пацанам. 🤙☝️",
+	"💖 это было сложно, но я тебя убил 💖"
 }
 LocalPlayer.Status.Kills:GetPropertyChangedSignal("Value"):Connect(function(current)      
 	if current == 0 then return end      
@@ -9596,7 +9580,7 @@ Text.Parent = Container
 Text.BackgroundTransparency = 1.000
 Text.Size = UDim2.new(0, 200, 0, 20)
 Text.ZIndex = 4
-Text.Font = Enum.Font.Code
+Text.Font = Enum.Font.Gotham
 Text.Text = "spectators"
 Text.TextColor3 = Color3.fromRGB(255, 255, 255)
 Text.TextSize = 15.000
@@ -9609,7 +9593,7 @@ Players.BackgroundTransparency = 1.000
 Players.Position = UDim2.new(0, 0, 0.992999971, 0)
 Players.Size = UDim2.new(0, 200, 0, 20)
 Players.ZIndex = 4
-Players.Font = Enum.Font.Code
+Players.Font = Enum.Font.Gotham
 Players.Text = ""
 Players.TextColor3 = Color3.fromRGB(255, 255, 255)
 Players.TextSize = 14.000
@@ -9652,6 +9636,5 @@ gui.Active = true
 end
 coroutine.wrap(SCUAM_fake_script)()
 game.CoreGui.SpectatorsList.Enabled = false
---pasted off aimcore. thanks for making the cheat, coke <3
-CreateHitElement("bloxware+ loaded, enjoy!",Color3.new(1,1,1), 5, 0, 270,  0, 22)
-CreateHitElement("made by coke#8620 and a1thernex#1604",Color3.new(1,1,1), 5, 0, 270,  0, 22)
+CreateHitElement("СКРИПТ: print('bloxware devs')",Color3.new(1,1,1), 5, 0, 270,  0, 22)
+CreateHitElement("МЕНЮ: alekwy",Color3.new(1,1,1), 5, 0, 270,  0, 22)
